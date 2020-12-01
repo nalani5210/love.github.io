@@ -1,0 +1,141 @@
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<meta lang="en" name="description" content="online reformatter tool and JSON difference comparison  for JSON, a lightweight data-interchange format.">
+		<meta lang="en" name="keywords" content="JSON Formatter,JSON Formatting,JSON Validator,JSON">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="robots" content="INDEX, FOLLOW">
+		<meta property="og:title" content="JSON Format, JSON Formatting">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="http://jsonformatting.com">
+		<meta property="og:description" content="Format and differentiate JSON so that people can make better use of it.">		
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		 crossorigin="anonymous">
+		 <style type="text/css">
+			#container {
+				width:	100%;
+				height:	75%;
+				background: #3f7fb8;
+				justify-content: center;
+				align-items: center;
+				display: -webkit-flex;
+				display: flex;
+			}
+			
+			#about {
+				width:	100%;
+				justify-content: center;
+				align-items: center;
+				display: -webkit-flex;
+				display: flex;
+				background-color: #f2f2f2;
+			}
+			
+			#aboutText {
+				background: #f2f2f2;
+				margin:0 auto; 
+				width:	40%;
+				height:	60%;
+			}
+					
+			p{
+				margin-top: 20px;
+				font-size: 1.125em;
+				line-height: 1.65;
+				font-family: Ubuntu,Arial,Helvetica,Verdana,sans-serif;
+			}
+
+			
+		
+		 </style>
+		<script crossorigin="anonymous" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+		 src="https://lib.baomitu.com/jquery/3.5.1/jquery.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		 crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<nav class="JSON Format - JSON Formatting - Validator" >
+			<div class="container-fluid">						
+					<h1 style="font-size: 26px;color: black; text-align:center">JSON Formatting Private Policy</h1>	
+			</div>
+		</nav>
+		<div class="containers" id="containers" >
+			<div id="about">
+				<div id="aboutText" >
+					<p>
+						&emsp;The privacy policy protects data information collected through www.jsonformatting.com. Your privacy is extremely important to us. Therefore, we implement this privacy policy to ensure that the data collected through the website is protected. </p>
+						
+					<br/>
+					<h4>Jsonformatting data privacy protection commitment </h4>
+					
+					<p>
+						&emsp;Protecting the security and privacy of your personal data is very important to jsonformatting. I hope the following policies can help you understand the data collected by jsonformatting and the protection methods.</p>
+						
+					<br/>
+					<h4>Personal data </h4>
+					
+					<p>
+						&emsp;jsonformatting website will not collect or retain any data submitted by users except for the contact requests and error reports submitted by the users intentionally. All contact requests or error report submitted will be kept confidential and deleted upon request.</p>
+						
+					<br/>
+					<h4>Information collected </h4>
+					
+					<p>
+						&emsp;When you use our website or services, or request other information about our products and services, we may receive some information, such as browser name, computer type, and technical information about how to connect to the site.</p>
+						
+					<br/>
+					<h4>Safety  </h4>
+					
+					<p>
+						&emsp;In order to prevent accidental or illegal damage, loss, abuse, tampering, and unauthorized disclosure or access of personal data, jsonformatting will use possible physics and technology to ensure your information security.</p>
+						
+					<br/>
+					<h4>changes   </h4>
+					
+					<p>
+						&emsp;This privacy policy may be revised at any time without notice. We encourage users to frequently check this page for any changes.
+Your continued use of jsonformatting websites after any changes or revisions to this policy shall indicate your agreement with the revised privacy policy.</p>
+
+					<br/>
+					<h4>Contact information   </h4>
+					
+					<p>
+						&emsp;If you have any questions about jsonformatting data privacy protection policy, please send an email to <a href="#">nalani5210@gmail.com</a></p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(document).ready(() => {
+			setContanierHeight();
+		});
+		$(".navbar-nav>li").click(function() {
+			$("li").removeClass();
+			$(this).addClass("active");
+			var src = getIframeUrl(this.id);
+			if (src !== '') {
+				$("#iframe").attr("src", src);
+			}
+		});
+		$(window).resize(() => {
+			setContanierHeight();
+		});
+		var getIframeUrl = function(id) {
+			var src = "";
+			switch (id) {
+				case 'parse': src = "../jsonformat/jsondiff.html"; break;
+				case 'compare': src = "../jsondiff/jsondiff-diff.html"; break;
+				default: src = "";
+			}
+			return src;
+		}
+		setContanierHeight = function () {
+			var height = 1080;
+			var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+			height = clientHeight - 150;
+			$("#containers").css("height", height+'px');
+		}
+	</script>
+</html>

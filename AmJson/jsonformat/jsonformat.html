@@ -1,0 +1,266 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <title>JSON Format - JSON Formatting</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
+  <meta lang="en" name="description" content="online reformatter tool and JSON difference comparison  for JSON, a lightweight data-interchange format.">
+  <meta lang="en" name="keywords" content="JSON Formatter,JSON Formatting,JSON Validator,JSON">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="INDEX, FOLLOW">
+  <meta property="og:title" content="JSON Format, JSON Formatting">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://jsonformatting.com">
+  <meta property="og:description" content="Format and differentiate JSON so that people can make better use of it.">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+  <link rel="stylesheet" href="../assets/css/jsonformat.min.css">
+  <link rel="stylesheet" href="../assets/css/app.css">
+  <link rel="stylesheet" href="../assets/css/format.css">
+  <style type="text/css">
+      #title {
+        color: #A2875E;
+      }
+
+      #container {
+        width:	100%;
+        height:	75%;
+        background: #3f7fb8;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #jsonFormat {
+        background: white;
+        margin:0 auto;
+        width:	60%;
+        height:	75%;
+      }
+
+      #rawJson {
+        width: 100%;
+        height: 350px;
+        border: 0;
+        outline:none;
+        resize:none
+      }
+
+      #ControlsRow{
+        margin-bottom: 50px;
+      }
+
+      .am-thumbnails li {
+        height: 500px;
+      }
+
+      .am-topbar {
+        margin-bottom: 0;
+      }
+
+      #format {
+        margin-left: 3px;
+      }
+
+      #footer {
+        width:	100%;
+        height:	10%;
+        justify-content: center;
+        align-items: center;
+        background: #A2875E;
+      }
+
+      #footerText {
+        margin:5px auto;
+        width:	40%;
+        height:	60%;
+      }
+
+      ul h2 {
+        text-align: center;
+        color: inherit;
+        font-size: 2.0em;
+        font-weight: 600;
+        line-height: 1.125;
+      }
+
+    h4 {
+      font-family: Ubuntu,Arial,Helvetica,Verdana,sans-serif;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="am-topbar">
+    <h1 class="am-topbar-brand">
+      <a href="#"><h2 id="title">JSON FORMAT</h2></a>
+    </h1>
+
+    <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li class="am-active"><a href="#" id="jsonFormatSwitch">JSON FORMAT</a></li>
+        <li><a href="#" id="jsonCompareSwitch">JSON DIFF</a></li>
+      </ul>
+
+      <ul style="float: right; list-style:none; ">
+        <li>
+          <a href="#about">About</a>&emsp;
+          <a href="#knowJson">KnowJson</a>&emsp;
+          <a href="#errors">Errors</a>&emsp;
+          <a href="#faq">FAQ</a>&emsp;
+          <a href="../private/private.html" target="_blank">Policy</a>&emsp;
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <div id="container">
+  <!--jsonFormat -->
+    <div id="jsonFormat">
+      <div style="height: 50px; background: #3f7fb8"></div>
+      <div class="HeadersRow">
+        <textarea id="rawJson" placeholder="Input Json String Please ..."></textarea>
+      </div>
+      <div id="ControlsRow">
+        <input type="Button" value="Format" onclick="Process()" id="format"/>
+        <span id="TabSizeHolder">
+          indent
+          <select id="TabSize" onchange="TabSizeChanged()">
+            <option value="1">1</option>
+            <option value="2" selected="true">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </span>
+        &emsp;
+        <label for="QuoteKeys">
+          <input type="checkbox" id="QuoteKeys" onclick="QuoteKeysClicked()" checked="true" />
+          quotation marks
+        </label>
+      </div>
+      <div id="canvas" class="canvas"></div>
+    </div>
+
+    <!--jsonCompare -->
+    <div id="jsonCompare" style="display: none; "></div>
+
+    <!-- about -->
+    <div  id="about">
+      <ul class="am-avg-sm-3 am-thumbnails">
+        <div style="height: 50px; background: #f2f2f2"></div>
+        <li style="background-color: #f2f2f2"></li>
+        <li style="background-color: #f2f2f2">
+          <h2>ABOUT JSONFORMATTING</h2>
+          <h4>
+            &emsp;JSONformatting can provide validation and formatting of JSON, and can compare the differences between two JSONs.
+            JSON is a lightweight data exchange format. <br/> <br/>
+            &emsp;You only need to enter JSON in the editor above, and  JSONformatting can help you complete the verification, formatting and comparison of JSON. <br/> <br/>
+            &emsp;It follows several validation standards of JSON, including the current specification <a href="https://tools.ietf.org/html/rfc8259" target="_blank" >RFC 8259</a> and <a href="https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf" target="_blank" >ECMA-404</a>.
+          </h4>
+        </li>
+        <li style="background-color: #f2f2f2"></li>
+      </ul>
+    </div>
+
+
+    <!-- knowJson -->
+    <div  id="knowJson">
+      <ul class="am-avg-sm-3 am-thumbnails">
+        <div style="height: 50px; background: white"></div>
+        <li style="background-color: white"></li>
+        <li style="background-color: white">
+          <h2>Get to know JSON</h2>
+          <h4>
+            &emsp;JSON is short for JavaScript Object Notation, and is a way to store information in an organized, easy-to-access manner. In a nutshell, it gives us a human-readable collection of data that we can access in a really logical manner.<br/> <br/>
+            &emsp;JSON is a language-independent data format. It was derived from JavaScript, but many modern programming languages include code to generate and parse JSON-format data. The official Internet media type for JSON is application/json. JSON filenames use the extension .json. <br/> <br/>
+            &emsp;For more JSON knowledge, please click to link .  &emsp;
+            <a href="https://www.json.org/json-en.html" target="_blank" >json.org</a>&emsp;
+            <a href="https://www.w3schools.com/js/js_json_intro.asp" target="_blank" >w3schools.com</a>
+          </h4>
+        </li>
+        <li style="background-color: white"></li>
+      </ul>
+    </div>
+
+    <!-- common errors -->
+    <div  id="errors">
+      <ul class="am-avg-sm-3 am-thumbnails">
+        <div style="height: 50px; background: #dfc576"></div>
+        <li style="background-color: #dfc576"></li>
+        <li style="background-color: #dfc576">
+          <h2>Common Errors</h2>
+          <h4>
+            &emsp;1. Expecting 'STRING' - You probably have an extra comma at the end of your collection. Something like { "a": "b", } .<br/> <br/>
+            &emsp;2. Expecting 'STRING', 'NUMBER', 'NULL', 'TRUE', 'FALSE', '{', '[' - You probably have an extra comma at the end of your list. Something like: ["a", "b", ]. <br/> <br/>
+            &emsp;3. Enclosing your collection keys in quotes. Proper format for a collection is { "key": "value" } . <br/> <br/>
+            &emsp; 4. Make sure you follow JSON's syntax properly. For example, always use double quotes, always quotify your keys, and remove all callback functions.
+          </h4>
+        </li>
+        <li style="background-color: #dfc576"></li>
+      </ul>
+    </div>
+
+    <!-- FAQ -->
+    <div  id="faq">
+      <ul class="am-avg-sm-3 am-thumbnails">
+        <div style="height: 50px; background: #f2f2f2"></div>
+        <li style="background-color: #f2f2f2"></li>
+        <li style="background-color: #f2f2f2">
+          <h2>FAQ</h2>
+          &emsp;&emsp;&emsp;We helped you sort out some Tibetan sword problems.
+          <h4>
+            Why does JSON compare abnormal under Firefox?<br/> <br/>
+          </h4>
+          &emsp;We are very sorry, but the support for JSON comparison plugin under Firefox is not good enough. We will continue to follow up on this issue.
+          <h4>
+            Which JSON specification is more suitable for me?<br/> <br/>
+          </h4>
+          &emsp;We recommend using the latest specification <a href="https://datatracker.ietf.org/doc/rfc8259/" target="_blank">RFC 8259</a> , which has the best compatibility.
+          <h4>Is any of my JSON data recorded or saved for other purposes?</h4>
+          &emsp;Absolutely not! For more information, please see the
+          <a href="../private/private.html" target="_blank">privacy policy</a>.
+        </li>
+        <li style="background-color: #f2f2f2"></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div id="footer" style="overflow-x: hidden">
+    <div id="footerText">
+      <p style="text-align:center">© 2018 - 2020 JSONFormatting | Privacy Policy</p>
+    </div>
+  </div>
+
+
+  <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+  <script crossorigin="anonymous" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+          src="https://lib.baomitu.com/jquery/3.5.1/jquery.js"></script>
+  <script type="text/javascript" src="../assets/js/json.js"></script>
+</body>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#jsonFormatSwitch").click(function () {
+      $("#jsonFormat").show();
+      $("#jsonCompare").hide();
+      $("#jsonFormatSwitch").parent().addClass("am-active");
+      $("#jsonFormatSwitch").parent().siblings().removeClass("am-active")
+      $("iframe").remove();
+    });
+
+    $("#jsonCompareSwitch").click(function () {
+      $("#jsonFormat").hide();
+      $("#jsonCompare").show();
+      $("#jsonCompareSwitch").parent().addClass("am-active");
+      $("#jsonCompareSwitch").parent().siblings().removeClass("am-active")
+      $("#jsonCompare").append("<iframe  style=\"width: 100%;height: 100%\" src=\"../jsoncompare/jsondiff-diff.html\"></iframe>")
+    });
+    $("#jsonCompare").css("height",$("#jsonFormat").height() + 50)
+  });
+</script>
+</html>

@@ -1732,7 +1732,7 @@ fieldset[disabled] .am-btn-default.am-active {
 }
 .am-btn-group .am-btn-default,
 .am-btn-group-stacked .am-btn-default {
-  border-color: #d9d9d9;
+  border-color: white;
 }
 .am-btn-primary {
   color: #fff;

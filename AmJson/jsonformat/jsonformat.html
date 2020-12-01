@@ -214,9 +214,9 @@
           <h2>FAQ</h2>
           &emsp;&emsp;&emsp;We helped you sort out some Tibetan sword problems.
           <h4>
-            Why does JSON compare abnormal under Firefox?<br/> <br/>
+            Why does JSON compare abnormal under IE11?<br/> <br/>
           </h4>
-          &emsp;We are very sorry, but the support for JSON comparison plugin under Firefox is not good enough. We will continue to follow up on this issue.
+          &emsp;We are very sorry, but the support for JSON comparison plugin under IE11 is not good enough. We will continue to follow up on this issue.
           <h4>
             Which JSON specification is more suitable for me?<br/> <br/>
           </h4>
@@ -258,7 +258,8 @@
       $("#jsonCompare").show();
       $("#jsonCompareSwitch").parent().addClass("am-active");
       $("#jsonCompareSwitch").parent().siblings().removeClass("am-active")
-      $("#jsonCompare").append("<iframe  style=\"width: 100%;height: 100%\" src=\"../jsoncompare/jsondiff-diff.html\"></iframe>")
+      //$("#jsonCompare").append("<iframe  style=\"width: 100%;height: 100%\" src=\"../jsoncompare/jsondiff-diff.html\"></iframe>")
+      $("#jsonCompare").append("<iframe  style=\"width: 100%;height: 100%\" src=\"../jsondiff/jsondiff.html\"></iframe>")
     });
     $("#jsonCompare").css("height",$("#jsonFormat").height() + 50)
   });

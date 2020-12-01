@@ -597,7 +597,7 @@ var utils = {
     }
 };
 
-var jsonCompositeTemplate = '<div id="json-composite"><div id="validator-placeholder1"></div><div id="validator-placeholder2"></div><div id="diff-placeholder"></div><div id="tips-and-tricks"><a id="close-tips" class="close-btn" href="#">X</a><h1>JSON Lint Pro</h1><h2>The easiest way to validate and format JSON</h2><ul><li>Type your JSON into the textarea, or enter a remote URL</li><li>Use the split mode to speed up your workflow, or to run a diff.</li><li>Use the delete button to quickly clear your input.</li></ul></div></div>',
+var jsonCompositeTemplate = '<div id="json-composite" style="height: 100%"><div id="validator-placeholder1"></div><div id="validator-placeholder2"></div><div id="diff-placeholder"></div><div id="tips-and-tricks"><a id="close-tips" class="close-btn" href="#">X</a><h1>JSONFormatting</h1><h2>The easiest way to validate and format JSON</h2><ul><li>Type your JSON into the textarea, or enter a remote URL</li><li>Use the split mode to speed up your workflow, or to run a diff.</li><li>Use the delete button to quickly clear your input.</li></ul></div></div>',
     validatorTemplate = '<form class="JSONValidate" method="post" action="." name="JSONValidate"><textarea class="json_input" name="json_input" class="json_input" rows="30" cols="100" spellcheck="false" placeholder="Input JSON String please ..."></textarea><a href="#" title="Run validation" class="button validate"><span class="icon">Lint Me!</span></a><a href="#" title="Delete the current data" class="button reset"><span class="icon">Reset</span></a><a href="#" title="Run validation and perform a diff" class="button diff"><span class="icon">Diff</span></a></form>',
     errorTemplate = '<div class="error-view"><a class="close-btn" href="#">X</a><span class="arrow-down"></span><pre class="results"></pre></div>',
     diffTemplate = '<div id="diff-view"><a href="#" title="Run validation and perform a diff" class="button diff"><span class="icon">Diff</span></a><a href="#" title="Cancel diff" class="button cancel-diff"><span class="icon">Cancel diff</span></a><div class="json_input" contenteditable="true"></div></div>';
@@ -756,7 +756,7 @@ var FADE_SPEED = 100,
 
         render : function () {
             var el = $(validatorTemplate);
-
+            console.log(el);
             this.$el.replaceWith(el);
             this.setElement(el);
 

@@ -1,188 +1,58 @@
 <!doctype html>
 <html class="no-js">
 <head>
-  <title>JSON Format - JSON Formatting - Validator</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta charset="utf-8" />
-  <meta lang="en" name="description" content="online reformatter tool and JSON difference comparison  for JSON, a lightweight data-interchange format.">
-  <meta lang="en" name="keywords" content="JSON Formatter,JSON Formatting,JSON Validator,JSON">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="INDEX, FOLLOW">
-  <meta property="og:title" content="JSON Format, JSON Formatting">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="http://jsonformatting.com">
-  <meta property="og:description" content="Format and differentiate JSON so that people can make better use of it.">
+  <title>JSON Formatting Private Policy</title>
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
   <link rel="stylesheet" href="../assets/css/jsonformat.min.css">
   <link rel="stylesheet" href="../assets/css/app.css">
   <link rel="stylesheet" href="../assets/css/format.css">
   <style type="text/css">
-      #title {
-        color: #A2875E;
-      }
 
-      #container {
-        width:	100%;
-        height:	75%;
-        background: #3f7fb8;
-        justify-content: center;
-        align-items: center;
-      }
+    h2 {
+      text-align: center ;
+    }
 
-      #jsonFormat {
-        background: white;
-        margin:0 auto;
-        width:	60%;
-        height:	75%;
-      }
-
-      #rawJson {
-        width: 100%;
-        height: 350px;
-        border: 0;
-        outline:none;
-        resize:none
-      }
-
-      #ControlsRow{
-        margin-bottom: 50px;
-      }
-
-      .am-thumbnails li {
-        height: 500px;
-      }
-
-      .am-topbar {
-        margin-bottom: 0;
-      }
-
-      #format {
-        margin-left: 3px;
-      }
-
-      ul h2 {
-        text-align: center;
-        color: inherit;
-        font-size: 2.0em;
-        font-weight: 600;
-        line-height: 1.125;
-      }
-
-    h4 {
-      font-family: Ubuntu,Arial,Helvetica,Verdana,sans-serif;
+    body {
+      background: #f2f2f2
     }
   </style>
 </head>
 <body>
 
-<header class="am-topbar">
-  <h1 class="am-topbar-brand">
-    <a href="#"><h2 id="title">JSON FORMAT</h2></a>
-  </h1>
-
-  <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
-    <ul class="am-nav am-nav-pills am-topbar-nav">
-      <li class="am-active"><a href="#">JSON FORMAT</a></li>
-    </ul>
-  </div>
-</header>
 
 
 <div id="container">
-  <div id="jsonFormat">
-    <div style="height: 50px; background: #3f7fb8"></div>
-    <div class="HeadersRow">
-      <textarea id="rawJson" placeholder="Input Json String Please ..."></textarea>
-    </div>
-    <div id="ControlsRow">
-      <input type="Button" value="Format" onclick="Process()" id="format"/>
-      &emsp;
-      <span id="TabSizeHolder">
-        indent
-        <select id="TabSize" onchange="TabSizeChanged()">
-          <option value="1">1</option>
-          <option value="2" selected="true">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-        </select>
-      </span>
-      &emsp;
-      <label for="QuoteKeys">
-        <input type="checkbox" id="QuoteKeys" onclick="QuoteKeysClicked()" checked="true" />
-        quotation marks
-      </label>
-    </div>
-    <div id="canvas" class="canvas"></div>
-<!--    <div style="height: 50px; background: #3f7fb8"></div>-->
-  </div>
   <!-- about -->
   <ul class="am-avg-sm-3 am-thumbnails">
-    <div style="height: 50px; background: #f2f2f2"></div>
-    <li style="background-color: #f2f2f2"></li>
-    <li style="background-color: #f2f2f2">
-      <h2>ABOUT JSONFORMATTING</h2>
-      <h4>
-        &emsp;JSONformatting can provide validation and formatting of JSON, and can compare the differences between two JSONs.
-        JSON is a lightweight data exchange format. <br/> <br/>
-        &emsp;You only need to enter JSON in the editor above, and  JSONformatting can help you complete the verification, formatting and comparison of JSON. <br/> <br/>
-        &emsp;It follows several validation standards of JSON, including the current specification <a href="https://tools.ietf.org/html/rfc8259" target="_blank" >RFC 8259</a> and <a href="https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf" target="_blank" >ECMA-404</a>.
-      </h4>
-    </li>
-    <li style="background-color: #f2f2f2"></li>
-  </ul>
+    <div style="height: 50px;"></div>
+    <li></li>
+    <li>
+      <h2>JSON Formatting Private Policy</h2>
+        &emsp;The privacy policy protects data information collected through www.jsonformatting.com. Your privacy is extremely important to us. Therefore, we implement this privacy policy to ensure that the data collected through the website is protected. </p>
+        <br/>
+        <h3>Jsonformatting data privacy protection commitment </h3>
+        &emsp;Protecting the security and privacy of your personal data is very important to jsonformatting. I hope the following policies can help you understand the data collected by jsonformatting and the protection methods.</p>
+        <br/>
+        <h3>Personal data </h3>
+        &emsp;jsonformatting website will not collect or retain any data submitted by users except for the contact requests and error reports submitted by the users intentionally. All contact requests or error report submitted will be kept confidential and deleted upon request.</p>
+        <br/>
+      <h3>Information collected </h3>
+      &emsp;When you use our website or services, or request other information about our products and services, we may receive some information, such as browser name, computer type, and technical information about how to connect to the site.</p>
 
-  <!-- knowJson -->
-  <ul class="am-avg-sm-3 am-thumbnails">
-    <div style="height: 50px; background: white"></div>
-    <li style="background-color: white"></li>
-    <li style="background-color: white">
-      <h2>Get to know JSON</h2>
-      <h4>
-        &emsp;JSON is short for JavaScript Object Notation, and is a way to store information in an organized, easy-to-access manner. In a nutshell, it gives us a human-readable collection of data that we can access in a really logical manner.<br/> <br/>
-        &emsp;JSON is a language-independent data format. It was derived from JavaScript, but many modern programming languages include code to generate and parse JSON-format data. The official Internet media type for JSON is application/json. JSON filenames use the extension .json. <br/> <br/>
-        &emsp;For more JSON knowledge, please click to link .  &emsp;
-        <a href="https://www.json.org/json-en.html" target="_blank" >json.org</a>&emsp;
-        <a href="https://www.w3schools.com/js/js_json_intro.asp" target="_blank" >w3schools.com</a>
-      </h4>
+      <br/>
+      <h3>Safety  </h3>
+      &emsp;In order to prevent accidental or illegal damage, loss, abuse, tampering, and unauthorized disclosure or access of personal data, jsonformatting will use possible physics and technology to ensure your information security.</p>
+      <br/>
+      <h3>changes   </h3>
+      <p>
+        &emsp;This privacy policy may be revised at any time without notice. We encourage users to frequently check this page for any changes.
+        Your continued use of jsonformatting websites after any changes or revisions to this policy shall indicate your agreement with the revised privacy policy.</p>
+      <br/>
+      <h3>Contact information   </h3>
+      <p>
+        &emsp;If you have any questions about jsonformatting data privacy protection policy, please send an email to <a href="#">nalani5210@gmail.com</a></p>
     </li>
-    <li style="background-color: white"></li>
-  </ul>
-
-  <!-- common errors -->
-  <ul class="am-avg-sm-3 am-thumbnails">
-    <div style="height: 50px; background: #dfc576"></div>
-    <li style="background-color: #dfc576"></li>
-    <li style="background-color: #dfc576">
-      <h2>Common Errors</h2>
-      <h4>
-        &emsp;1. Expecting 'STRING' - You probably have an extra comma at the end of your collection. Something like { "a": "b", } .<br/> <br/>
-        &emsp;2. Expecting 'STRING', 'NUMBER', 'NULL', 'TRUE', 'FALSE', '{', '[' - You probably have an extra comma at the end of your list. Something like: ["a", "b", ]. <br/> <br/>
-        &emsp;3. Enclosing your collection keys in quotes. Proper format for a collection is { "key": "value" } . <br/> <br/>
-        &emsp; 4. Make sure you follow JSON's syntax properly. For example, always use double quotes, always quotify your keys, and remove all callback functions.
-      </h4>
-    </li>
-    <li style="background-color: #dfc576"></li>
-  </ul>
-
-  <!-- FAQ -->
-  <ul class="am-avg-sm-3 am-thumbnails">
-    <div style="height: 50px; background: #f2f2f2"></div>
-    <li style="background-color: #f2f2f2"></li>
-    <li style="background-color: #f2f2f2">
-      <h2>FAQ</h2>
-      We helped you sort out some Tibetan sword problems
-      <h4>
-        Which JSON specification is more suitable for me?<br/> <br/>
-      </h4>
-      &emsp;We recommend using the latest specification <a href="https://datatracker.ietf.org/doc/rfc8259/" target="_blank">RFC 8259</a> , which has the best compatibility.
-      <h4>Is any of my JSON data recorded or saved for other purposes?</h4>
-      &emsp;Absolutely not! For more information, please see the
-      <a href="../private/private.html" target="_blank">privacy policy</a>.
-    </li>
-    <li style="background-color: #f2f2f2"></li>
+    <li></li>
   </ul>
 </div>
 

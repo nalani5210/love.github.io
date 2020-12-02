@@ -287,7 +287,8 @@
           'background' : 'white',
           'margin' : '0 auto',
           'width' : '60%',
-          'height' : '75%'
+          'height' : '75%',
+          'overflow' : 'inherit'
         });
 
         $("#jsonFormat").removeClass("compareClass");
@@ -301,8 +302,12 @@
           'overflow' : 'hidden',
           'height' : '0'
         });
+        $("#jsonCompare").css({
+          'width' : '100%',
+          'height' : h + 50
+        });
+
         $("#jsonCompare").removeClass("compareClass");
-        $("#jsonCompare").css("height",h + 50);
         $("#jsonCompareSwitch").parent().addClass("am-active");
         $("#jsonCompareSwitch").parent().siblings().removeClass("am-active")
       });

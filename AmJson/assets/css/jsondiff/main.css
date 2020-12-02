@@ -1,9 +1,10 @@
 html, body {
   margin: 0; padding: 0;
   height: 100%;
-  background-color: white;
+  background-color: #1D1F21;
   overflow: hidden;
 }
+
 ul, li {
   padding: 0;
   margin: 0;
@@ -101,13 +102,6 @@ textarea {
 
 .header-icon {
   padding-top: 5px;
-}
-
-h1 {
-  margin: 0; padding: 0;
-  font-weight: lighter;
-  text-transform: lowercase;
-  padding-top: 6px;
 }
 
 h2 {
@@ -240,35 +234,6 @@ h2 {
   cursor: pointer;
 }
 
-body.lighttheme {
-  background-color: #f9f9f9;
-}
-
-.lighttheme #header {
-  color: white;
-  background-color: #f9f9f9;
-}
-
-.lighttheme .header-icon path {
-  fill: white;
-}
-
-.lighttheme .settings-menu-content {
-  background-color: #eaeaea;
-}
-
-.lighttheme .settings-menu:hover {
-  background-color: #eaeaea;
-}
-
-.lighttheme .left-panel {
-  border-right-color: #dddddd;
-  border-right-width: 1px;
-}
-
-.lighttheme .ad-container * {
-  color: white !important;
-}
 
 button {
   border: 0;
@@ -301,14 +266,6 @@ button:active {
 
 .diff-history-item:hover {
   background-color: #2d2d2d;
-}
-
-.lighttheme .diff-history-item {
-  color: white;
-}
-
-.lighttheme .diff-history-item:hover {
-  background-color: #e4e4e4;
 }
 
 .history-timestamp {

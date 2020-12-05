@@ -104,3 +104,6 @@ robots.txt 文件中可以使用下列指令
 	示例 4 ：仅禁止特定爬虫访问特定目录（BadBot用真实的名字代替）	
 			User-agent: BadBot
 			Disallow: /private/
+
+
+   7.**sitemap**

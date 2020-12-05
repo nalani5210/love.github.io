@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type="text/css">
+@media print {pre,code {word-wrap: break-word;}
+</style>
+<title>Windows平台搭建WordPress.md</title>
+</head>
+<body>
+<p>如果你想建立自己的博客，又不想受制于第三方平台的限制，那么自建博客就是你最好的选择。 自然而然WordPress就是最佳的建站工具了。</p>
+<ul>
+<li>域名</li>
+<li>服务器</li>
+<li>安装xampp</li>
+<li>安装WordPress</li>
+<li>解析</li>
+</ul>
+<ol>
+<li>
+<p>域名</p>
+<p>首先，如果你希望你的博客对外开放，与大家一起交流，那么域名是必须的； 如果你建立博客只是想自己看不希望对外开放，那么域名是不需要的。</p>
+<p>域名的购买方式有很多，我习惯去万网 <a href="https://wanwang.aliyun.com/domain/searchresult#/?keyword=&amp;suffix=com" title="万网">万网购买域名</a> 。直接搜索心仪的域名直接购买，域名的选择没有要求，建议买便宜的就行 ，够用！</p>
+</li>
+<li>
+<p>服务器</p>
+<p>同样，如果博客不希望对外，服务器同样不用买，用自己的主机就可以。</p>
+<p>服务器我推荐几种方式</p>
+<p>a. 谷歌服务器</p>
+<p>前提是需要翻墙。 登录  <a href="https://www.google.com.hk/" title="google">google</a>，注册账号，这里具体的注册流程就不细讲了。 有了账号以后登录<a href="https://cloud.google.com/?hl=zh-cN" title="谷歌云">谷歌云计算服务</a> ，点击免费试用，按照步骤来填就可以，谷歌会免费送你 $300 赠金用来购买服务器并且未来90天内都是免费。这里需要注意一点，<strong>需要个人有一张双币（或者全币种）的信用卡才可以</strong>。</p>
+<p>b. AWS</p>
+<p>前提同样需要翻墙。 登录  <a href="https://aws.amazon.com/cn/" title="AWS">aws.amazon官网</a>，注册账号。 <strong>同样需要个人有一张双币（或者全币种）的信用卡才可以</strong>。 不细讲了，我会单独开一文章来说 。AWS免费12个月</p>
+<p>c. 阿里云/腾讯云/华为云等等</p>
+<p>国内的云服务厂家众多，可以挑选一家或者等活动购买，配置的话用基础配置就可以，如果后期不够再加。</p>
+</li>
+<li>
+<p>安装xampp</p>
+<blockquote>
+<p>xampp是什么</p>
+</blockquote>
+<p>XAMPP是一个把Apache网页服务器与PHP、Mysql等集合在一起的安装包，允许用户可以在个人的电脑上或者服务器轻易的建立网页服务器。</p>
+<p><a href="https://www.apachefriends.org/index.html" title="xampp下载">点击下载</a></p>
+<p>一直next，安装好以后打开目录，xampp-control.exe 就是我们以后的启动程序了</p>
+<p><img src="https://github.com/nalani5210/love.github.io/blob/bolg/Windows%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BAWordPress/%E6%9C%AC%E5%9C%B0%E7%9B%AE%E5%BD%95.png?raw=true" alt="xampp本地目录" title="xampp本地目录" /></p>
+<p>如果一切没问题，那么xampp就已经安全好了</p>
+</li>
+<li>
+<p>安装WordPress</p>
+<p><a href="https://cn.wordpress.org/wordpress-4.9.4-zh_CN.zip" title="WordPress下载">点击下载</a></p>
+<p>下载完以后，压缩，将所有文件放在\xampp\htdocs目录下</p>
+<p><img src="https://github.com/nalani5210/love.github.io/blob/bolg/Windows%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BAWordPress/wp%E6%96%87%E4%BB%B6%E6%94%BE%E5%9C%A8%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%95.png?raw=true" alt="文件放在指定目录下" title="文件放在指定目录下" /></p>
+<p>现在在浏览器输入你的127.0.0.1:80，如果前面都没问题，会跳转到绑定数据库安装程序的页面，<strong>先别忙着点击开始</strong>，我们先切回到xampp程序。</p>
+<p><img src="https://github.com/nalani5210/love.github.io/blob/bolg/Windows%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BAWordPress/%E5%BB%BA%E7%AB%8Bmp%E6%95%B0%E6%8D%AE%E5%BA%93.png?raw=true" alt="建立mp数据库" title="建立mp数据库" /></p>
+<p>打开\xampp\htdocs\目录下的wp-config-sample.php文件，推荐使用<a href="https://notepad-plus-plus.org/downloads/" title="notepad++下载">notepad++</a>编辑器</p>
+<p><img src="https://github.com/nalani5210/love.github.io/blob/bolg/Windows%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BAWordPress/wp-config-sample.png?raw=true" alt="wp-config-sample.php" title="wp-config-sample.php" /></p>
+<p>设置好以后，切回浏览器，点击开始安装。 填上对应的数据库信息 及 后续的站点基本信息。 浏览器输入127.0.0.1  就可以打开个人的博客地址了</p>
+</li>
+<li>
+<p>解析</p>
+<p>这里拿阿里云的做说明，登录到后台，对应的域名点[解析]</p>
+<p><img src="https://github.com/nalani5210/love.github.io/blob/bolg/Windows%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BAWordPress/@%E8%A7%A3%E6%9E%90.png?raw=true" alt="解析" title="解析" /></p>
+<p><img src="https://github.com/nalani5210/love.github.io/blob/bolg/Windows%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BAWordPress/www%E8%A7%A3%E6%9E%90.png?raw=true" alt="解析" title="解析" /></p>
+</li>
+</ol>
+
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SEO优化小记</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<p>最近做了一个在线服务类的小网站，为了能在google上有好的排名，自己做了一些相关的优化。 相关的优化知道网上应该都可以找到，我自己做了一些整理。</p>
+<p>1.首先说一下网站的代码结构，是table结构还是div。 如果是div+css结构，是比较适合做SEO的，网页内容和网页样式尽量分开书写，分开管理，这是属于精简的代码结构； 如果是table结构，很容易产生冗余代码，属于不精简的代码结构，不适合做SEO，可能需要重新建站=0=。  我自己的小网站是div结构的，我也在google观察了一些排名比较靠前的网站，确实没见到用table结构的。</p>
+<p>2.信噪比。 信噪比指的是网页有效信息和无效信息的比例；
+有效信息是文字
+无效信息指的是无效代码、空代码、富媒体；富媒体指的是视频、音频，flash动画、JavaScript。 这其实是平时编码的一个好习惯，文字不要有错别字，无效的信息要及时清理。</p>
+<p>3.iframe。 Iframe是一个比较特殊的标签。被Iframe嵌套的内容不会被搜索引擎抓取，一般用于出站链接的广告位。  但是项目有一些情况需要用到Iframe，比如嵌套一个页面，而且我们有希望这个被嵌套的页面被搜索引擎抓取，我自己的替代方案是用<object>标签。</p>
+<p>4.javascript。 js有一个特点，js输出的内容搜索引擎不识别。所以页面的关键字千万不要用js来做输出！  还有网页在使用js时尽量放置在网页底部，不影响搜索引擎抓取常规内容。</p>
+<p>5.h1-h6标签。 h1标记一个网页只能出现一次，整站所有页面h1需要对应同一个核心关键词，强调关键词； 这个很重要，把最重要的关键字用h1包起来 ！  h2-h3标记可以多次使用，尽量也不要太多；
+h4-h6可以不使用，基本没什么权重了。</p>
+<p>6.img和a标签。 img标记的alt属性，搜索引擎依靠图片alt属性来判断图片内容，文章中图片alt属性使用文章标题即可； a标签的title属性，title属性同alt属性。</p>
+<p>7.display: none。 display: none对SEO的影响，网上的说法众说纷纭，所以我在自己的网站里，还是彻底抛弃了这种方法。我的替代方案有两种</p>
+<pre><code> .hiddenClass {
+    width:1px;
+    height:0;
+    overflow:hidden;
+ }
+</code></pre>
+
+<p>或者用z-index建立层叠关系，不过z-index需要提醒一点</p>
+<pre><code>z-index 仅能在定位元素上奏效,即该元素不是默认的position:static
+需要设置 position:absolute | relative | fixed;
+</code></pre>
+
+<p>6.robots.txt。 </p>
+<p>什么是 robots.txt 文件</p>
+<pre><code>robots.txt 文件规定了搜索引擎抓取工具可以/无法请求抓取您网站上的哪些网页或文件
+此文件主要用于使您的网站避免收到过多请求
+</code></pre>
+
+<p>格式和位置规则	</p>
+<pre><code>文件必须命名为 robots.txt
+网站只能有1个 robots.txt 文件
+robots.txt 文件必须位于要应用到的网站主机的根目录下
+</code></pre>
+
+<p>robots.txt 文件中可以使用下列指令
+- User-agent
+[必需，每个组需含一个或多个 User-agent 条目] 此规则的适用搜索引擎漫游器（即网页抓取工具软件）的名称。这是每条规则的首行内容。 支持通配符*</p>
+<blockquote>
+<p>几个比较常用的代理
+1. Google: Googlebot
+2. Google Images: Googlebot-Image
+3. Bing: Bingbot
+4. Yahoo: Slurp
+5. Baidu: Baiduspider
+6. DuckDuckGo: DuckDuckBot</p>
+</blockquote>
+<pre><code># 示例 1：仅屏蔽 Googlebot
+User-agent: Googlebot
+Disallow: /
+
+# 示例 2：屏蔽 Googlebot 和 Adsbot
+User-agent: Googlebot
+User-agent: AdsBot-Google
+Disallow: /
+
+# 示例 3：屏蔽除 AdsBot 抓取工具之外的所有抓取工具
+User-agent: * 
+Disallow: /
+</code></pre>
+
+<ul>
+<li>
+<p>Disallow
+[每条规则需含至少一个或多个 Disallow 或 Allow 条目] 用户代理不应抓取的目录或网页（相对于根网域而言）。如果要指定网页，应提供浏览器中显示的完整网页名称；如果要指定目录，则应以标记/结尾。支持使用通配符*表示路径前缀、后缀或整个字符串</p>
+</li>
+<li>
+<p>Allow
+[每条规则需含至少一个或多个 Disallow 或 Allow 条目] 上文中提到的用户代理应抓取的目录或网页（相对于根网域而言）。此指令用于替换 Disallow 指令，从而允许抓取已禁止访问的目录中的子目录或网页。如果要指定网页，就应提供浏览器中显示的完整网页名称；如果要指定目录，则应以标记/结尾。支持使用通配符*表示路径前缀、后缀或整个字符串</p>
+</li>
+<li>
+<p>Sitemap
+后面细说</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+	<th>规则</th>
+	<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>禁止抓取整个网站。 请注意，在某些情况下，Google 即使未抓取网站的网址，仍可能会将其编入索引。注意：这不适用于各种 AdsBot 抓取工具，此类抓取工具必须明确指定</td>
+	<td>User-agent: * Disallow: /</td>
+</tr>
+<tr>
+	<td>禁止抓取某一目录及其内容（在目录名后面添加一道正斜线）。请注意，若想禁止访问私密内容，则不应使用 robots.txt，而应改用适当的身份验证机制。对于 robots.txt 文件所禁止抓取的网址，Google 仍可能会在不进行抓取的情况下将其编入索引；另外，由于 robots.txt 文件可供任何人随意查看，因此可能会泄露您的私密内容的位置</td>
+	<td>User-agent: * Disallow: /calendar/ Disallow: /junk/</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

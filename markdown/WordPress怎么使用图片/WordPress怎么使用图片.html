@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type="text/css">
+@media print {pre,code {word-wrap: break-word;}
+</style>
+<title>WordPress怎么使用图片.md</title>
+</head>
+<body>
+<p>在使用wp写博客的时候，经常会用到图片，但是wp对本地图片的支持不是很好，这里作者用的方法是把图片上传到github，然后再用网络地址。</p>
+<ul>
+<li>GitHub</li>
+<li>GitHubDesktop</li>
+<li>安装xampp</li>
+<li>安装WordPress</li>
+<li>解析</li>
+</ul>
+<ol>
+<li>
+<p>GitHub</p>
+<p>首先，如果你没用过GitHub，那你要先了解GitHub是什么。</p>
+<blockquote>
+<p>GitHub 是一个面向开源及私有软件项目的托管平台，因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub。</p>
+</blockquote>
+<p>简单来说，GitHub是一个开源的托管平台，可供自己或者其他人一起分享使用的一个平台。 先登录<a href="https://github.com/" title="GitHub官网">GitHub</a>，没有账号的先进行注册。 <strong>如果登录不了应该是限制网络的关系，可能需要翻墙</strong></p>
+<p><img src="https://github.com/nalani5210/love.github.io/blob/bolg/WordPress%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8%E5%9B%BE%E7%89%87/github%E6%96%B0%E5%BB%BArepo.png?raw=true" alt="github新建repo.png" title="github新建repo.png" /></p>
+<p><img src="https://github.com/nalani5210/love.github.io/blob/bolg/WordPress%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8%E5%9B%BE%E7%89%87/github%E6%96%B0%E5%BB%BArepos2.png?raw=true" alt="github新建repo.png" title="github新建repo.png" /></p>
+</li>
+<li>
+<p>GitHubDesktop</p>
+<p>为了更方便也为了很多没接触过github的人来说，用git的桌面工具更来的事半功倍。 不用命令行，直接操作就可以！</p>
+<p><a href="https://desktop.github.com/" title="GitHubDesktop">点击下载</a></p>
+<p>下载完成直接安装</p>
+<p><img src="https://github.com/nalani5210/love.github.io/blob/bolg/WordPress%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8%E5%9B%BE%E7%89%87/%E5%85%B3%E8%81%94Github%E8%BF%9B%E8%A1%8C%E7%99%BB%E5%BD%95.png?raw=true" alt="github关联登录" title="github关联登录" /></p>
+<p>点击Sign in to GitHub.com进行关联登录</p>
+<p><img src="https://github.com/nalani5210/love.github.io/blob/bolg/WordPress%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8%E5%9B%BE%E7%89%87/%E5%85%B3%E8%81%94%E4%BB%A5%E5%90%8E%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84repository.png?raw=true" alt="选择repo" title="选择repo" /></p>
+<p>选择要关联的仓库，进入主页面。 点击左上角菜单 File-Clone Repository 弹出对话框</p>
+<p><img src="https://github.com/nalani5210/love.github.io/blob/bolg/WordPress%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8%E5%9B%BE%E7%89%87/%E9%80%89%E6%8B%A9%E4%BB%93%E5%BA%93%E4%B8%8B%E8%BD%BD%E5%88%B0%E6%9C%AC%E5%9C%B0.png?raw=true" alt="选择仓库下载到本地" title="选择仓库下载到本地" /></p>
+<p>然后打开本地文件夹</p>
+<p><img src="https://github.com/nalani5210/love.github.io/blob/bolg/WordPress%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8%E5%9B%BE%E7%89%87/%E6%8A%8A%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6%E4%BB%B6%E6%88%96%E8%80%85%E6%96%87%E4%BB%B6%E6%94%BE%E5%88%B0%E7%9B%AE%E5%BD%95%E4%B8%8B.png?raw=true" alt="把图片文件件或者文件放到目录下" title="把图片文件件或者文件放到目录下" /></p>
+<p><img src="https://github.com/nalani5210/love.github.io/blob/bolg/WordPress%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8%E5%9B%BE%E7%89%87/commit.png?raw=true" alt="commit" title="commit" /></p>
+<p><img src="https://github.com/nalani5210/love.github.io/blob/bolg/WordPress%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8%E5%9B%BE%E7%89%87/push.png?raw=true" alt="push" title="push" /></p>
+<p><img src="https://github.com/nalani5210/love.github.io/blob/bolg/WordPress%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8%E5%9B%BE%E7%89%87/%E5%8F%AF%E4%BB%A5%E5%9C%A8git%E4%B8%8A%E7%9C%8B%E5%88%B0%E5%B7%B2%E7%BB%8F%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%9B%BE%E7%89%87.png?raw=true" alt="可以看到上传的图片了" title="可以看到上传的图片了" /></p>
+<p>右键复制图片地址，就可以使用图片在wp了。</p>
+<p><img src="https://github.com/nalani5210/love.github.io/blob/bolg/WordPress%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8%E5%9B%BE%E7%89%87/pull.png?raw=true" alt="pull" title="pull" /></p>
+</li>
+</ol>
+
+</body>
+</html>

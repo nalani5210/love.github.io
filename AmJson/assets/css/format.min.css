@@ -34,7 +34,8 @@
 }
 
 .am-thumbnails li {
-  height: 500px;
+  /*height: 500px;*/
+  height: 100%;
 }
 
 .am-topbar {

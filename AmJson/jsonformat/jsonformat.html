@@ -20,7 +20,8 @@
 
 </head>
 <body>
-
+  <!--  todo 优化h4标签-->
+  <!--  todo 优化排版样式-->
   <header class="am-topbar">
     <h1 class="am-topbar-brand">
       <a href="#" title="JSON FORMAT & JSON DIFF & JSON Validator">JSON FORMAT & JSON DIFF</a>
@@ -172,6 +173,14 @@
   <script crossorigin="anonymous" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
           src="https://lib.baomitu.com/jquery/3.5.1/jquery.js"></script>
   <script type="text/javascript" src="js/json.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".am-thumbnails li").each(function (i,obj){
+        console.log($(obj).height());
+      });
+    });
+  </script>
 
 </body>
 </html>

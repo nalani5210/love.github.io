@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>JSON Diff - JSON Compare</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta lang="en" name="description" content="online reformatter tool and JSON difference comparison  for JSON, a lightweight data-interchange format.">
+    <meta lang="en" name="description" content="online reformatter tool and JSON difference comparison for JSON, a lightweight data-interchange format.">
+    <meta lang="en" name="keywords" content="JSON Formatter,JSON Formatting,JSON Validator,JSON Diff,JSON,Debug JSON,Pretty Print JSON,Validate JSON,JSON Pretty Printer,JSON Beautifier,Beautify JSON">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta property="og:title" content="JSON Format, JSON Formatting">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://jsonformatting.com">
+    <meta property="og:description" content="Format and differentiate JSON so that people can make better use of it.">
+    <link href="../assets/icon/json.png" rel="icon">
+    <link rel="stylesheet" href="../assets/css/jsondiff/lib/codemirror.css" charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/jsondiff/lib/tomorrow-night.css" charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/jsondiff/main.css?cachebust=1" charset="utf-8">
+</head>
+<style type="text/css">
+    .diff-inputs {
+        width: 100%;
+    }
+
+    .CodeMirror-gutters {
+        height: 0 !important;
+    }
+
+    #left-input {
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+    #right-input {
+        border-left: 1px solid #e1e1e1;
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+    .CodeMirror-lines {
+        color: black !important;
+        font-family: Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+    }
+
+</style>
+
+
+<body>
+<div class="diff-inputs">
+    <div id="left-input" class="json-diff-input split">
+        <textarea id="json-diff-left"></textarea>
+    </div>
+    <div id="right-input" class="json-diff-input split">
+        <textarea id="json-diff-right"></textarea>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="../assets/js/jsondiff/lib/json-patch-duplex.min.js" charset="utf-8"></script>
+<script src="../assets/js/jsondiff/lib/backbone-events-standalone.min.js" charset="utf-8"></script>
+<script src="../assets/js/jsondiff/lib/codemirror.js" charset="utf-8"></script>
+<script src="../assets/js/jsondiff/lib/formatting.js" charset="utf-8"></script>
+<script src="../assets/js/jsondiff/lib/javascript.js" charset="utf-8"></script>
+<script src="../assets/js/jsondiff/lib/json-source-map.js" charset="utf-8"></script>
+<script src="../assets/js/jsondiff/main.js" charset="utf-8"></script>
+<script>
+    $(".cm-s-tomorrow-night").addClass("CodeMirror-focused");
+</script>
+</body>
+</html>
+

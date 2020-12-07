@@ -92,6 +92,7 @@
 
 p{
   color: white;
+  text-align:center;
 }
 
 p a {
@@ -101,6 +102,10 @@ p a {
 p a:hover{
   color: white;
   text-decoration: underline
+}
+
+#knowJson ul li {
+  background-color: white
 }
 
 

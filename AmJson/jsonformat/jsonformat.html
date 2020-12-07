@@ -6,23 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8" />
   <meta lang="en" name="description" content="online reformatter tool and JSON difference comparison for JSON, a lightweight data-interchange format.">
-  <meta lang="en" name="keywords" content="JSON Formatter,JSON Formatting,JSON Validator,JSON Diff,JSON,Debug JSON,Pretty Print JSON,Validate JSON,JSON Pretty Printer,JSON Beautifier,Beautify JSON">
+  <meta lang="en" name="keywords" content="JSON Formatter,JSON Formatting,JSON Validator,JSON Diff,JSON tools online,JSON,Debug JSON,Pretty Print JSON,Validate JSON,JSON Pretty Printer,JSON Beautifier,Beautify JSON">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="INDEX, FOLLOW">
   <meta property="og:title" content="JSON Format, JSON Formatting">
   <meta property="og:type" content="website">
   <meta property="og:url" content="http://jsonformatting.com">
   <meta property="og:description" content="Format and differentiate JSON so that people can make better use of it.">
-  <link href="../assets/icon/json.png" rel="icon">
+  <link href="icon/json.png" rel="icon">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-  <link rel="stylesheet" href="../assets/css/jsonformat.min.css">
-  <link rel="stylesheet" href="../assets/css/app.css">
-  <link rel="stylesheet" href="../assets/css/format.css">
+  <link rel="stylesheet" href="css/jsonformat.min.css">
+  <link rel="stylesheet" href="css/format.css">
   <style type="text/css">
-      #title {
-        color: #A2875E;
-      }
-
       #container {
         width:	100%;
         height:	75%;
@@ -90,12 +85,6 @@
         background-color: #dfc576
       }
 
-      .compareClass {
-        width:1px;
-        height:0;
-        overflow:hidden;
-      }
-
       ul span {
         text-align: center;
         color: inherit;
@@ -128,7 +117,7 @@
     <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
       <ul class="am-nav am-nav-pills am-topbar-nav">
         <li class="am-active"><a href="#" id="jsonFormatSwitch"><h2><strong>JSON FORMAT & Validator</strong></h2></a></li>
-        <li><a href="#" id="jsonCompareSwitch"><h2><strong>JSON DIFF</strong></h2></a></li>
+        <li><a href="/jsondiff" id="jsonCompareSwitch"><h2><strong>JSON DIFF</strong></h2></a></li>
       </ul>
 
 
@@ -138,7 +127,7 @@
           <a href="#knowJson">KnowJson</a>&emsp;
           <a href="#errors">Errors</a>&emsp;
           <a href="#faq">FAQ</a>&emsp;
-          <a href="../private/private.html" target="_blank" title="Read our JsonFormatting Privacy Policy">Policy</a>&emsp;
+          <a href="/private" target="_blank" title="Read our JsonFormatting Privacy Policy">Policy</a>&emsp;
         </li>
       </ul>
     </div>
@@ -171,13 +160,6 @@
         </label>
       </div>
       <div id="canvas" class="canvas"></div>
-    </div>
-
-    <!--jsonCompare -->
-    <div id="jsonCompare"  class="compareClass">
-      <object data="../jsondiff/jsondiff.html"
-              width="100%" height="100%"
-              type="text/html"></object>
     </div>
 
     <!-- about -->
@@ -258,7 +240,7 @@
           &emsp;We recommend using the latest specification <a href="https://datatracker.ietf.org/doc/rfc8259/" title="Visit the RFC 8259 JSON Specification">RFC 8259</a> , which has the best compatibility.
           <h4>Is any of my JSON data recorded or saved for other purposes?</h4>
           &emsp;Absolutely not! For more information, please see the
-          <a href="../private/private.html" target="_blank" title="Read our JsonFormatting Privacy Policy">privacy policy</a>.
+          <a href="/private" target="_blank" title="Read our JsonFormatting Privacy Policy">privacy policy</a>.
         </li>
         <li></li>
       </ul>
@@ -276,46 +258,6 @@
   <script src="https://www.google-analytics.com/urchin.js" type="text/javascript"></script>
   <script crossorigin="anonymous" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
           src="https://lib.baomitu.com/jquery/3.5.1/jquery.js"></script>
-  <script type="text/javascript" src="../assets/js/json.js"></script>
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      var h = $("#jsonFormat").height();
-      $("#jsonFormatSwitch").click(function () {
-        $("#jsonCompare").css({
-          'width' : '1px',
-          'overflow' : 'hidden',
-          'height' : '0'
-        });
-        $("#jsonFormat").css({
-          'background' : 'white',
-          'margin' : '0 auto',
-          'width' : '60%',
-          'height' : '75%',
-          'overflow' : 'inherit'
-        });
-
-        $("#jsonFormat").removeClass("compareClass");
-        $("#jsonFormatSwitch").parent().addClass("am-active");
-        $("#jsonFormatSwitch").parent().siblings().removeClass("am-active")
-      });
-
-      $("#jsonCompareSwitch").click(function () {
-        $("#jsonFormat").css({
-          'width' : '1px',
-          'overflow' : 'hidden',
-          'height' : '0'
-        });
-        $("#jsonCompare").css({
-          'width' : '100%',
-          'height' : h + 50
-        });
-
-        $("#jsonCompare").removeClass("compareClass");
-        $("#jsonCompareSwitch").parent().addClass("am-active");
-        $("#jsonCompareSwitch").parent().siblings().removeClass("am-active")
-      });
-    });
-  </script>
+  <script type="text/javascript" src="js/json.js"></script>
 </body>
 </html>

@@ -120,6 +120,10 @@ ul span {
 
 h2 {
   font-size: 1em;
+  color: black;
+}
+
+.am-topbar-nav h2 {
   color: #57a3ae;
 }
 

@@ -31,8 +31,9 @@
   color:#0000FF;
 }
 
-.CodeContainerError {
+.CodeContainerError, .CodeContainer {
 	font-weight: bolder;
+	margin-bottom: 0;
 }
 
 

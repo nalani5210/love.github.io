@@ -1,4 +1,14 @@
-﻿window.SINGLE_TAB = "  ";
+﻿$(document).ready(function(){
+  $(".am-thumbnails li").each(function (i,obj){
+    var height = $(obj).height();
+    if(height != 0){
+      $(obj).prev().css("height", height + 10);
+      $(obj).next().css("height", height + 10);
+    }
+  });
+});
+
+window.SINGLE_TAB = "  ";
 window.ImgCollapsed = "Collapsed.gif";
 window.ImgExpanded = "Expanded.gif";
 window.QuoteKeys = true;
@@ -24,7 +34,6 @@ function Process(){
     $id("canvas").innerHTML = "<PRE class='CodeContainerError'><span style='color: red'>"+e.message+" , Please check the JSON format</span></PRE>";
   }
   $("#ControlsRow").css("margin-bottom" , "0");
-  $(".canvas").append("<div style=\"height: 50px; background: #3f7fb8\"></div>");
 }
 window._dateObj = new Date();
 window._regexpObj = new RegExp();

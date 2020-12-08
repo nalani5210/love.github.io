@@ -29,10 +29,6 @@
   resize:none
 }
 
-#ControlsRow{
-  margin-bottom: 50px;
-}
-
 .am-thumbnails li {
   /*height: 500px;*/
   height: 100%;
@@ -89,6 +85,10 @@
 
 .cm-s-tomorrow-night {
   height: 500px;
+}
+
+.note {
+  margin-top: 5px;
 }
 
 p{

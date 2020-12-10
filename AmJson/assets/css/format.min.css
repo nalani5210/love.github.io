@@ -62,6 +62,7 @@
 #navigation {
   float: right;
   list-style:none;
+  padding-top: 10px;
 }
 
 #about ul li , #faq ul li{
@@ -115,7 +116,7 @@ p a:hover{
 ul span {
   text-align: center;
   color: inherit;
-  font-size: 2.0em;
+  font-size: 1.0em;
   font-weight: 600;
   line-height: 1.125;
 }

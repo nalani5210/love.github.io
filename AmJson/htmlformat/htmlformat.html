@@ -22,6 +22,7 @@
     h1 {
       margin-top: 10px !important;
     }
+
     .CodeMirror-gutters {
       height: 100% !important;
     }
@@ -128,20 +129,20 @@
     <li>
       <div><h2 style="text-align: center"><span>Syntax Errors</span></h2></div>
       <div class="note">
-        &emsp;  1. Unintuitive error-handling behavior <br/>
+        &emsp; <span>1. Unintuitive error-handling behavior </span><br/>
         &emsp;  Certain invalid syntax constructs, when parsed, result in DOM trees that are highly unintuitive.
         <pre><code>< table>< hr>...</code></pre>
 
         <br/>
-        &emsp;  2. Errors that can result in infoset coercion<br/>
+        &emsp;  <span>2. Errors that can result in infoset coercion </span> <br/>
         &emsp;  When a user agent based on XML is connected to an HTML parser, it is possible that certain invariants that XML enforces, such as element or attribute names never contain multiple colons, will be violated by an HTML file. Handling this can require that the parser coerce the HTML DOM into an XML-compatible infoset. Most syntax constructs that require such handling are considered invalid. (Comments containing two consecutive hyphens, or ending with a hyphen, are exceptions that are allowed in the HTML syntax.)<br/>
         <br/>
-        &emsp;  3. Cases where the author's intent is unclear<br/>
+        &emsp;  <span>3. Cases where the author's intent is unclear </span><br/>
         &emsp;  Markup where the author's intent is very unclear is often made non-conforming. Correcting these errors early makes later maintenance easier.
         <pre><code>For example, it is unclear whether the author intended the following to be an h1 heading or an h2 heading:
         < h1>Contact details< /h2></code></pre>
         <br/>
-        &emsp;  4. Errors that could interfere with new syntax in the future<br/>
+        &emsp;  <span>4. Errors that could interfere with new syntax in the future</span> <br/>
         &emsp;  In order to allow the language syntax to be extended in the future, certain otherwise harmless features are disallowed.
       </div>
     </li>
@@ -156,14 +157,16 @@
     <li>
       <div><h2 style="text-align: center"><span>FAQ</span></h2></div>
       <div class="note">
-        &emsp;We helped you sort out some Tibetan sword problems.
-        Why does JSON compare abnormal under IE11?<br/> <br/>
-        &emsp;We are very sorry, but the support for JSON comparison plugin under IE11 is not good enough. We will continue to follow up on this issue.
-        Which JSON specification is more suitable for me?<br/> <br/>
-        &emsp;We recommend using the latest specification <a href="https://datatracker.ietf.org/doc/rfc8259/" title="Visit the RFC 8259 JSON Specification">RFC 8259</a> , which has the best compatibility.
-        Is any of my JSON data recorded or saved for other purposes?
-        &emsp;Absolutely not! For more information, please see the
-        <a href="/private" target="_blank" title="Read our JsonFormatting Privacy Policy">privacy policy</a>.
+        <span>What is HTML?</span><br/>
+        &emsp; <a href="https://html.spec.whatwg.org/multipage/">HTML</a> is the core foundational standard being worked on by the WHATWG community. It is continuously maintained and supersedes HTML4,
+        XHTML1, DOM Level 2 HTML, and all previous HTML specifications — addressing many of the shortcomings of those specifications while at the same time enhancing HTML to more adequately cover the needs of web applications. Along with defining the HTML markup language, it also defines many of the core requirements that form the basis of the web runtime.<br/><br/>
+        <span>What is HTML5? </span><br/>
+        &emsp; Going forward, the WHATWG is just working on "HTML", without worrying about version numbers. When people talk about "HTML5" in the context of the WHATWG, they usually mean just "the latest work on HTML",
+        not necessarily a specific version. For more details, see the section called "<a href="https://html.spec.whatwg.org/multipage/introduction.html#is-this-html5?">Is this HTML5?</a> " in the standard.<br/><br/>
+        <span>How do I validate my pages? </span><br/>
+        &emsp;Use a <a href="https://whatwg.org/validator/">validator</a>.<br/><br/>
+
+        For more HTML information, please see the <a href="https://github.com/whatwg/html">HTML</a>.
       </div>
     </li>
     <li></li>

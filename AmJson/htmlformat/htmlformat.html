@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
-  <title>JSON TO XML</title>
+  <title>HTML FORMAT</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8" />
-  <meta lang="en" name="description" content="On line processing of transformation from JSON to XML.">
-  <meta lang="en" name="keywords" content="JSON Formatter,JSON Formatting,JSON Validator,JSON TO XML,JSON tools online,JSON">
+  <meta lang="en" name="description" content="On line processing of transformation from HTML FORMAT.">
+  <meta lang="en" name="keywords" content="HTML Formatter,HTML Formatting,HTML Validator,HTML">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="INDEX, FOLLOW">
-  <meta property="og:title" content="JSON TO XML">
+  <meta property="og:title" content="HTML FORMAT">
   <meta property="og:type" content="website">
   <meta property="og:url" content="http://jsonformatting.com">
   <link href="/assets/icon/json.png" rel="icon">
@@ -33,7 +33,7 @@
 <header class="am-topbar">
   <div>
     <h1 class="am-topbar-brand">
-      <a href="#" title="JSON FORMAT & JSON DIFF & JSON Validator">JSON FORMAT & JSON DIFF</a>
+      <a href="#" title="JSON FORMAT & JSON DIFF & JSON Validator">HTML FORMAT / COMPRESS</a>
     </h1>
   </div>
 
@@ -41,8 +41,8 @@
     <ul class="am-nav am-nav-pills am-topbar-nav">
       <li><a href="/" id="jsonFormatSwitch"><h2><strong>JSON FORMAT & Validator</strong></h2></a></li>
       <li><a href="/jsondiff" id="jsonCompareSwitch"><h2><strong>JSON DIFF</strong></h2></a></li>
-      <li class="am-active"><a href="/json2xml"><h2><strong>JSON TO XML</strong></h2></a></li>
-      <li><a href="/htmlformat"><h2><strong>HTML FORMAT</strong></h2></a></li>
+      <li><a href="/json2xml"><h2><strong>JSON TO XML</strong></h2></a></li>
+      <li class="am-active"><a href="/htmlformat"><h2><strong>HTML FORMAT</strong></h2></a></li>
     </ul>
     <ul id="navigation">
       <li>
@@ -67,14 +67,17 @@
           <div class="layui-col-xs12">
             <div style="line-height: 0">
               <textarea id="source" style="height:280px;" rows="20" cols="160"></textarea>
-              <div class="format-div">
-                <button class="layui-btn  submit" type="button" id="btn_xml_parser"><strong>JSON TO XML</strong> </button>
-                <select name="select_theme" id="select_theme" class="select_theme">
-                  <option selected>default</option>
-                  <option>erlang-dark</option>
-                  <option>material</option>
-                </select>
-              </div>
+                <div class="format-div">
+                  <button class="layui-btn  submit" type="button"><strong>HTML FORMAT</strong> <em>(ctrl-enter)</em></button>
+                  <button class="layui-btn " type="button" id="btn_compress">
+                    <strong>Compress HTML </strong>
+                  </button>
+                  <select name="select_theme" id="select_theme" class="select_theme">
+                    <option selected>default</option>
+                    <option>erlang-dark</option>
+                    <option>material</option>
+                  </select>
+                </div>
             </div>
           </div>
         </div>
@@ -92,8 +95,7 @@
       <div class="note">
         &emsp;  JSONformatting can provide validation and formatting of JSON / HTML / CSS and a series of operations. <br/> <br/>
         &emsp;  You only need to input the source code such as JSON / HTML / CSS in the editor above. JSON formatting can help you complete the corresponding verification, formatting and comparison. <br/> <br/>
-        &emsp;  It follows several validation standards of JSON, including the current specification <a href="https://tools.ietf.org/html/rfc8259" title="Visit the RFC 8259 JSON Specification">RFC 8259</a> and <a href="https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf" title="Visit the ECMA-404 JSON Specification">ECMA-404</a>.
-      </div>
+        </div>
     </li>
     <li></li>
   </ul>
@@ -104,16 +106,15 @@
   <ul class="am-avg-sm-3 am-thumbnails">
     <li></li>
     <li>
-      <div><h2 style="text-align: center"><span>Get to know JSON</span></h2></div>
+      <div><h2 style="text-align: center"><span>Get to know HTML</span></h2></div>
       <div class="note">
-        &emsp;JSON is short for JavaScript Object Notation, and is a way to store information in an organized, easy-to-access manner. In a nutshell, it gives us a human-readable collection of data that we can access in a really logical manner.<br/> <br/>
-        &emsp;JSON is a language-independent data format. It was derived from JavaScript, but many modern programming languages include code to generate and parse JSON-format data. The official Internet media type for JSON is application/json. JSON filenames use the extension .json. <br/> <br/>
-        &emsp;For more JSON knowledge, please click to link . <br/><br/>
-        <a href="https://www.json.org/json-en.html" title=" json.org">json.org</a>&emsp;<br/>
-        <a href="https://www.w3schools.com/js/js_json_intro.asp" title="Visit w3schools.com's JSON Tutorial">w3schools.com</a>&emsp;<br/>
-        <a href="https://en.wikipedia.org/wiki/JSON" title="Visit Wikipedia's JSON Entry">Wikipedia - JSON</a>&emsp;<br/>
-        <a href="https://en.wikipedia.org/wiki/JSON#JSONP" title="Visit Wikipedia's JSONP Entry">Wikipedia - JSONP</a>&emsp;<br/>
-        <a href="https://en.wikipedia.org/wiki/JSON-RPC" title="Visit Wikipedia's JSON-RPC Entry">Wikipedia - JSON-RPC</a>&emsp;<br/>
+        &emsp;  <strong>Hypertext Markup Language (HTML)</strong> is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.<br/><br/>
+        &emsp;  Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.<br/><br/>
+        &emsp;  For more HTML knowledge, please click to link .<br/><br/>
+        <a href="https://en.wikipedia.org/wiki/HTML" title="Visit Wikipedia's HTML Entry">Wikipedia - HTML</a>&emsp;<br/>
+        <a href="https://en.wikipedia.org/wiki/Help:HTML_in_wikitext" title="Visit Wikipedia's HTML instructions">Wikipedia - HTML instructions</a>&emsp;<br/>
+        <a href="https://html.spec.whatwg.org/" title="Visit the current HTML standard">HTML standard</a>&emsp;<br/>
+        <a href="https://en.wikipedia.org/wiki/W3C_Markup_Validation_Service#External_links" title="Visit W3C Markup Validation Service">W3C HTML Validation Service</a>&emsp;<br/>
       </div>
     </li>
     <li></li>
@@ -125,12 +126,23 @@
   <ul class="am-avg-sm-3 am-thumbnails">
     <li></li>
     <li>
-      <div><h2 style="text-align: center"><span>Common Errors</span></h2></div>
+      <div><h2 style="text-align: center"><span>Syntax Errors</span></h2></div>
       <div class="note">
-        &emsp;1. Expecting 'STRING' - You probably have an extra comma at the end of your collection. Something like { "a": "b", } .<br/> <br/>
-        &emsp;2. Expecting 'STRING', 'NUMBER', 'NULL', 'TRUE', 'FALSE', '{', '[' - You probably have an extra comma at the end of your list. Something like: ["a", "b", ]. <br/> <br/>
-        &emsp;3. Enclosing your collection keys in quotes. Proper format for a collection is { "key": "value" } . <br/> <br/>
-        &emsp; 4. Make sure you follow JSON's syntax properly. For example, always use double quotes, always quotify your keys, and remove all callback functions.
+        &emsp;  1. Unintuitive error-handling behavior <br/>
+        &emsp;  Certain invalid syntax constructs, when parsed, result in DOM trees that are highly unintuitive.
+        <pre><code>< table>< hr>...</code></pre>
+
+        <br/>
+        &emsp;  2. Errors that can result in infoset coercion<br/>
+        &emsp;  When a user agent based on XML is connected to an HTML parser, it is possible that certain invariants that XML enforces, such as element or attribute names never contain multiple colons, will be violated by an HTML file. Handling this can require that the parser coerce the HTML DOM into an XML-compatible infoset. Most syntax constructs that require such handling are considered invalid. (Comments containing two consecutive hyphens, or ending with a hyphen, are exceptions that are allowed in the HTML syntax.)<br/>
+        <br/>
+        &emsp;  3. Cases where the author's intent is unclear<br/>
+        &emsp;  Markup where the author's intent is very unclear is often made non-conforming. Correcting these errors early makes later maintenance easier.
+        <pre><code>For example, it is unclear whether the author intended the following to be an h1 heading or an h2 heading:
+        < h1>Contact details< /h2></code></pre>
+        <br/>
+        &emsp;  4. Errors that could interfere with new syntax in the future<br/>
+        &emsp;  In order to allow the language syntax to be extended in the future, certain otherwise harmless features are disallowed.
       </div>
     </li>
     <li></li>
@@ -169,7 +181,8 @@
 <script src="/json2xml/json2xml-assets/js/javascript.js"></script>
 <script src="/jsonformat/jsonformat-assets/js/jquery3.5.1.js"></script>
 <script src="/json2xml/json2xml-assets/js/jquery.cookie.js"></script>
-<script src="/json2xml/json2xml-assets/js/json2xml.js"></script>
 <script src="/json2xml/json2xml-assets/js/codemirror-init.js"></script>
+<script src="/htmlformat/htmlformat-assets/js/beautify.js"></script>
+<script src="/htmlformat/htmlformat-assets/js/beautify-html.js"></script>
 </body>
 </html>

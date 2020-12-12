@@ -13,9 +13,9 @@
   <meta property="og:url" content="http://jsonformatting.com">
   <meta property="og:description" content="Format and differentiate JSON so that people can make better use of it.">
   <link href="assets/icon/json.png" rel="icon">
-  <link rel="stylesheet" href="jsonformatassets/css/jsonformat.min.css">
-  <link rel="stylesheet" href="jsonformatassets/css/format.css">
-  <link rel="stylesheet" href="jsonformatassets/css/format.min.css">
+  <link rel="stylesheet" href="jsonformat/jsonformat-assets/css/jsonformat.min.css">
+  <link rel="stylesheet" href="jsonformat/jsonformat-assets/css/format.css">
+  <link rel="stylesheet" href="jsonformat/jsonformat-assets/css/format.min.css">
   <script data-ad-client="ca-pub-3292250109309115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <style>
     h1 {
@@ -36,6 +36,7 @@
         <li class="am-active"><a href="#" id="jsonFormatSwitch"><h2><strong>JSON FORMAT & Validator</strong></h2></a></li>
         <li><a href="/jsondiff" id="jsonCompareSwitch"><h2><strong>JSON DIFF</strong></h2></a></li>
         <li><a href="/json2xml"><h2><strong>JSON TO XML</strong></h2></a></li>
+        <li><a href="/htmlformat"><h2><strong>HTML FORMAT</strong></h2></a></li>
       </ul>
       <ul id="navigation">
         <li>
@@ -57,10 +58,10 @@
         <textarea id="rawJson" placeholder="Input Json String Please ..."></textarea>
       </div>
       <div id="ControlsRow">
-        <input type="Button" value="Format" onclick="Process()" id="format"/>
+        <input type="Button" value="JSON FORMAT" onclick="Process()" id="format" class="layui-btn"/>
         <span id="TabSizeHolder">
           indent
-          <select id="TabSize" onchange="TabSizeChanged()">
+          <select id="TabSize" onchange="TabSizeChanged()" class="select_theme">
             <option value="1">1</option>
             <option value="2" selected>2</option>
             <option value="3">3</option>
@@ -85,13 +86,12 @@
       <li></li>
       <li>
         <div><h2 style="text-align: center"><span>ABOUT JSONFORMATTING</span></h2></div>
-          <div class="note">
-            &emsp;JSONformatting can provide validation and formatting of JSON, and can compare the differences between two JSONs.
-            JSON is a lightweight data exchange format. <br/> <br/>
-            &emsp;You only need to enter JSON in the editor above, and JSONformatting can help you complete the verification, formatting and comparison of JSON. <br/> <br/>
-            &emsp;It follows several validation standards of JSON, including the current specification <a href="https://tools.ietf.org/html/rfc8259" title="Visit the RFC 8259 JSON Specification">RFC 8259</a> and <a href="https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf" title="Visit the ECMA-404 JSON Specification">ECMA-404</a>.
-          </div>
-          </li>
+        <div class="note">
+            &emsp;  JSONformatting can provide validation and formatting of JSON / HTML / CSS and a series of operations. <br/> <br/>
+            &emsp;  You only need to input the source code such as JSON / HTML / CSS in the editor above. JSON formatting can help you complete the corresponding verification, formatting and comparison. <br/> <br/>
+            &emsp;  It follows several validation standards of JSON, including the current specification <a href="https://tools.ietf.org/html/rfc8259" title="Visit the RFC 8259 JSON Specification">RFC 8259</a> and <a href="https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf" title="Visit the ECMA-404 JSON Specification">ECMA-404</a>.
+        </div>
+      </li>
       <li></li>
     </ul>
   </div>
@@ -162,9 +162,7 @@
         <a href="/private">Privacy Policy</a></p>
     </div>
   </div>
-
-  <script src="jsonformatassets/js/jquery3.5.1.js"></script>
-  <script src="jsonformatassets/js/json.js"></script>
-
+  <script src="jsonformat/jsonformat-assets/js/jquery3.5.1.js"></script>
+  <script src="jsonformat/jsonformat-assets/js/json.js"></script>
 </body>
 </html>

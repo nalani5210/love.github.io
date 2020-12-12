@@ -209,12 +209,30 @@ try {
         var editor = the.editor;
         var input = document.getElementById("select_theme"); // 主题切换下拉框
 
+        input.onchange = () => {
+            var theme = input.options[input.selectedIndex].textContent;
+            editor.setOption("theme", theme);
+            location.hash = "#" + theme;
+        }
+
         var choice = (location.hash && location.hash.slice(1)) ||
             (document.location.search &&
                 decodeURIComponent(document.location.search.slice(1)));
         if (choice) {
             input.value = choice;
             editor.setOption("theme", choice);
+        }
+        CodeMirror.on(window, "hashchange", function () {
+            var theme = location.hash.slice(1);
+            if (theme) {
+                input.value = theme;
+                // selectTheme();
+            }
+        });
+
+        var hidden_syntax = $('#hidden_syntax').val();
+        if (hidden_syntax !== '') {
+            editor.setOption("mode", hidden_syntax);
         }
 
         // 压缩代码
@@ -258,9 +276,25 @@ try {
                     var xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>\n';
                     editor.setValue(xmlHeader + $.json2xml(JSON.parse(editor.getValue().replace('/* This is just a sample demo. Paste your real code here. */', ''))));
                 } catch (error) {
+
                 }
             }
         }
+
+        // json 转 xml方法，暂未测试通过，保留
+        /* var btn_json_parser = document.getElementById("btn_json_parser");
+        if (btn_json_parser) {
+            btn_json_parser.onclick = () => {
+                editor.setValue($.xml2json(editor.getValue()));
+            }
+        } */
+
+
+        editor.on("change", function (instance, obj) {
+            // $('#origin_content').val(editor.getValue().split("\n").join(" ").replace(/\s+/g, " "));
+            $('#origin_content').val(editor.getValue());
+        });
+
     });
 } catch (e) {
     // statements

@@ -2,7 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.jsonformatting.com</loc>
-        <lastmod>2020-12-12</lastmod>
-        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+        <lastmod>2020-12-13</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://www.jsonformatting.com/jsondiff</loc>
+        <priority>1.0</priority>
+        <lastmod>2020-12-13</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://www.jsonformatting.com/json2xml</loc>
+        <priority>1.0</priority>
+        <lastmod>2020-12-13</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://www.jsonformatting.com/htmlformat</loc>
+        <priority>1.0</priority>
+        <lastmod>2020-12-13</lastmod>
+        <changefreq>daily</changefreq>
     </url>
 </urlset>

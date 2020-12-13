@@ -6,22 +6,4 @@
         <lastmod>2020-12-13</lastmod>
         <changefreq>daily</changefreq>
     </url>
-    <url>
-        <loc>https://www.jsonformatting.com/jsondiff</loc>
-        <priority>1.0</priority>
-        <lastmod>2020-12-13</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://www.jsonformatting.com/json2xml</loc>
-        <priority>1.0</priority>
-        <lastmod>2020-12-13</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://www.jsonformatting.com/htmlformat</loc>
-        <priority>1.0</priority>
-        <lastmod>2020-12-13</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
 </urlset>

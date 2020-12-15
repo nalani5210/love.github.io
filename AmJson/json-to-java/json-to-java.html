@@ -1,41 +1,113 @@
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
-  <title>JSON Format - JSON Formatting</title>
+  <title>JSON TO JAVA , Convert JSON to JAVA format</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8" />
-  <meta lang="en" name="description" content="online reformatter tool and JSON difference comparison for JSON, a lightweight data-interchange format.">
-  <meta lang="en" name="keywords" content="JSON Formatter,JSON Formatting,JSON Validator,JSON Diff,JSON tools online,JSON,Debug JSON,Pretty Print JSON,Validate JSON,JSON Pretty Printer,JSON Beautifier,Beautify JSON">
+  <meta lang="en" name="description" content="Best Online JSON to JAVA Converter: Convert JSON to JAVA format.">
+  <meta lang="en" name="keywords" content="json to java, JSON to JAVA">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="INDEX, FOLLOW">
-  <meta property="og:title" content="JSON Format, JSON Formatting">
+  <meta property="og:title" content="JSON TO JAVA , Convert JSON to JAVA format">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.jsonformatting.com">
-  <meta property="og:description" content="Format and differentiate JSON so that people can make better use of it.">
+  <meta property="og:description" content="Best Online JSON to JAVA Converter: Convert JSON to JAVA format.">
   <link href="/assets/icon/json.png" rel="icon">
   <link rel="stylesheet" href="/jsonformat/jsonformat-assets/css/jsonformat.min.css">
   <link rel="stylesheet" href="/jsonformat/jsonformat-assets/css/format.css">
   <link rel="stylesheet" href="/jsonformat/jsonformat-assets/css/format.min.css">
   <style>
     h1 {
-      margin-top: 10px !important;
+      font-size: 20px;
+    }
+
+    #input-textarea{
+      height: 300px;
+      border-radius: 8px;
+      color: #4A4A4A;
+      border: 1px solid #979797;
+    }
+
+    .main {
+      background: #5D9CD4;
+      color: #fff;
+    }
+    .section {
+      border-radius: 8px;
+      padding: 50px;
+    }
+
+    .clearfix:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: " ";
+      clear: both;
+      height: 0;
+    }
+
+    .src-div {
+      float: left;
+      width: 48%;
+    }
+
+    .dest-div {
+      float: right;
+      width: 48%;
+    }
+
+    textarea {
+      width: 100%;
+      border-radius: 8px;
+      color: #4A4A4A;
+      border: 1px solid #979797;
+    }
+
+    input {
+      color: black;
+      width: 200px;
+    }
+
+    .error-tip , .dest-div{
+      margin-top: 20px;
+    }
+
+    .result {
+      width: 100%;
+      min-height: 800px;
+    }
+
+    .right-button {
+      float: right;
+      margin: 12px 0px 1px 0px;
+    }
+
+    button, .button {
+      background: #fff;
+      color: #5D9CD4;
+      border: 1px solid #979797;
+      border-radius: 10px;
+      padding: 5px 20px;
+      font-weight: 400;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
+
   <header class="am-topbar">
     <div>
       <h1 class="am-topbar-brand">
-        <a href="#" title="JSON FORMAT & JSON DIFF & JSON Validator">JSON FORMAT</a>
+        <a href="#" title="JSON TO JAVA"><h1>JSON TO JAVA</h1></a>
       </h1>
     </div>
 
     <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
       <ul class="am-nav am-nav-pills am-topbar-nav">
-        <li class="am-active"><a href="#"><h2><strong>JSON FORMAT</strong></h2></a></li>
+        <li><a href="https://www.jsonformatting.com/jsonformat"><h2><strong>JSON FORMA</strong></h2></a></li>
         <li><a href="https://www.jsonformatting.com/jsondiff" title="JSON DIFF"><h2><strong>JSON DIFF</strong></h2></a></li>
         <li><a href="https://www.jsonformatting.com/json-to-xml" title="JSON TO XML"><h2><strong>JSON TO XML</strong></h2></a></li>
-        <li><a href="https://www.jsonformatting.com/json-to-java" title="JSON TO JAVA"><h2><strong>JSON TO JAVA</strong></h2></a></li>
+        <li class="am-active"><a href="#" title="JSON TO JAVA"><h2><strong>JSON TO JAVA</strong></h2></a></li>
       </ul>
       <ul id="navigation">
         <li>
@@ -49,37 +121,48 @@
     </div>
   </header>
 
-  <div id="container">
-    <!--jsonFormat -->
-    <div id="jsonFormat">
-      <div style="height: 50px; background: #3f7fb8"></div>
-      <div class="HeadersRow">
-        <textarea id="rawJson" placeholder="Input Json String Please ..."></textarea>
+  <div class="section main clearfix">
+    <div class="config">
+      package:&nbsp;<input id="package-input" value="com.jsonformatting.tool"/>&emsp;
+      class:&nbsp;<input id="class-input" value="example"/>
+    </div>
+
+    <div class="src-div">
+      <div class="error-tip hide"></div>
+      <div class="input-box">
+        <textarea id="input-textarea" ></textarea>
       </div>
-      <div id="ControlsRow">
-        <input type="Button" value="JSON FORMAT" onclick="Process()" id="format" class="layui-btn"/>
-        <span id="TabSizeHolder">
-          indent
-          <select id="TabSize" onchange="TabSizeChanged()" class="select_theme">
-            <option value="1">1</option>
-            <option value="2" selected>2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-          </select>
-        </span>
-        &emsp;
-        <label for="QuoteKeys">
-          <input type="checkbox" id="QuoteKeys" onclick="QuoteKeysClicked()" checked />
-          quotation marks
-        </label>
+    </div>
+
+    <div class="dest-div">
+      <div class="result-list">
       </div>
-      <div id="canvas" class="canvas"></div>
     </div>
   </div>
-  <div style="height: 50px; background: #3f7fb8"></div>
-  <!-- about -->
+
+  <div style="display: none" id="getset-templ">
+    public void setA(T a) {
+      this.a = a;
+    }
+    public T getA() {
+      return a;
+    }
+  </div>
+
+  <div style="display: none" id="input-example">
+    {
+      "id": 1,
+      "username": "john_smith",
+      "email": "john@example.com",
+      "name": "John Smith",
+      "state": "active",
+      "created_at": "2012-05-23T08:00:58Z",
+      "access_level": 40,
+      "person":{"name":"test","age":1,"from":{"country":"china"}},
+      "about":["a","b"]
+    }
+  </div>
+
   <div id="about">
     <ul class="am-avg-sm-3 am-thumbnails">
       <li></li>
@@ -96,7 +179,6 @@
   </div>
 
 
-  <!-- knowJson -->
   <div id="knowJson">
     <ul class="am-avg-sm-3 am-thumbnails">
       <li></li>
@@ -117,7 +199,6 @@
     </ul>
   </div>
 
-  <!-- common errors -->
   <div id="errors">
     <ul class="am-avg-sm-3 am-thumbnails">
       <li></li>
@@ -134,7 +215,6 @@
     </ul>
   </div>
 
-  <!-- FAQ -->
   <div id="faq">
     <ul class="am-avg-sm-3 am-thumbnails">
       <li></li>
@@ -155,13 +235,13 @@
     </ul>
   </div>
 
-  <div id="footer">
-    <div id="footerText">
-      <p>© 2018 - 2020 <a href="https://www.jsonformatting.com" title="Visit www.jsonformatting.com">JSONFormatting</a>  |
-        <a href="https://www.jsonformatting.com/private">Privacy Policy</a></p>
-    </div>
-  </div>
-  <script src="/jsonformat/jsonformat-assets/js/jquery3.5.1.js"></script>
-  <script src="/jsonformat/jsonformat-assets/js/json.js"></script>
+  <script src="/json-to-java/json-to-java-assets/js/jquery.min.js"></script>
+  <script src="/json-to-java/json-to-java-assets/js/jsonlint.js"></script>
+  <script src="/json-to-java/json-to-java-assets/js/jquery-linedtextarea.js"></script>
+  <script src="/json-to-java/json-to-java-assets/js/highlight.pack.js"></script>
+
+  <script src="/json-to-java/json-to-java-assets/js/ZeroClipboard.js"></script>
+  <script src="/json-to-java/json-to-java-assets/js/tool.js"></script>
+  <script src="/json-to-java/json-to-java-assets/js/to-bean.js"></script>
 </body>
 </html>

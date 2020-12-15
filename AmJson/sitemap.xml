@@ -4,32 +4,65 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
+    <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
     <url>
         <loc>https://www.jsonformatting.com/</loc>
-        <lastmod>2020-12-13T13:51:22+00:00</lastmod>
+        <lastmod>2020-12-15T06:57:18+00:00</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>https://www.jsonformatting.com/jsondiff/</loc>
-        <lastmod>2020-12-12T14:11:21+00:00</lastmod>
+        <loc>https://www.jsonformatting.com/private/</loc>
+        <lastmod>2020-12-15T06:57:19+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.jsonformatting.com/json2xml/</loc>
-        <lastmod>2020-12-12T14:11:21+00:00</lastmod>
+        <loc>https://www.jsonformatting.com/jsonformat/</loc>
+        <lastmod>2020-12-15T06:57:19+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://www.jsonformatting.com/htmlformat/</loc>
-        <lastmod>2020-12-12T14:11:21+00:00</lastmod>
+        <lastmod>2020-12-15T06:57:18+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.jsonformatting.com/private/</loc>
-        <lastmod>2020-12-12T14:11:21+00:00</lastmod>
+        <loc>https://www.jsonformatting.com/xmlformat/</loc>
+        <lastmod>2020-12-15T06:57:19+00:00</lastmod>
         <priority>0.80</priority>
     </url>
-
-
+    <url>
+        <loc>https://www.jsonformatting.com/color/</loc>
+        <lastmod>2020-12-15T06:57:18+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.jsonformatting.com/jsondiff/</loc>
+        <lastmod>2020-12-15T06:57:19+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://www.jsonformatting.com/json-to-xml/</loc>
+        <lastmod>2020-12-15T06:57:19+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://www.jsonformatting.com/json-to-java/</loc>
+        <lastmod>2020-12-15T06:57:18+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://www.jsonformatting.com/xml-to-json/</loc>
+        <lastmod>2020-12-15T06:57:19+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://www.jsonformatting.com/xmlformat/xml.html</loc>
+        <lastmod>2020-12-15T06:57:19+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://www.jsonformatting.com/xml-to-json/xml2json.html</loc>
+        <lastmod>2020-12-15T06:57:19+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
 </urlset>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta lang="en" name="description" content="free online XML formatter .">
@@ -9,6 +9,7 @@
   <meta property="og:url" content="https://www.jsonformatting.com">
   <meta property="og:image" content="https://www.jsonformatting.com/assets/icon/json.png">
   <meta property="og:description" content="free online XML formatter .">
+  <link rel="canonical" href="https://www.jsonformatting.com/xmlformat" />
   <link rel="stylesheet" href="/xmlformat/xmlformat-assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="/xmlformat/xmlformat-assets/css/style.css">
   <title>XML to JSON Converter</title>
@@ -20,6 +21,11 @@
     .field {
       height: 320px;
     }
+
+    h1 h2{
+      font-size: 20px !important;
+    }
+
     body {
       overflow: hidden;
     }
@@ -42,7 +48,7 @@
     </div>
     <div class="span7">
       <legend>
-        Parse Result
+        <h2>Parse Result</h2>
       </legend>
       <div class="parse-result">{{outlet rendered}}</div>
     </div>
@@ -51,7 +57,7 @@
 </script>
 
 <script type="text/x-handlebars" data-template-name="xml/paste">
-  <legend>Input XML</legend>
+  <legend><h1>Input XML</h1></legend>
   {{#view App.XmlView}}
     <textarea name="xml" class="field span5" placeholder="Paste raw XML data"><?xml version="1.0" ?>
       <Request>

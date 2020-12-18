@@ -62,7 +62,7 @@ layui.use(['form', 'layer'], function () {
         $.ajax({
             type: "POST",
             data: reqData,
-            url: 'https://www.jsonformatting.com:38664/process_get',
+            url: 'http://127.0.0.1:38664/process_get',
             dataType: 'json',
             cache: false,
             async: true,

@@ -8,67 +8,67 @@
 
 
     <url>
-        <loc>https://www.jsonformatting.com/</loc>
+        <loc>http://127.0.0.1/</loc>
         <lastmod>2020-12-16T02:12:30+00:00</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>https://www.jsonformatting.com/private/</loc>
+        <loc>http://127.0.0.1/private/</loc>
         <lastmod>2020-12-15T06:57:19+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.jsonformatting.com/jsonformat/</loc>
+        <loc>http://127.0.0.1/jsonformat/</loc>
         <lastmod>2020-12-15T06:57:19+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.jsonformatting.com/htmlformat/</loc>
+        <loc>http://127.0.0.1/htmlformat/</loc>
         <lastmod>2020-12-16T02:12:30+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.jsonformatting.com/xmlformat/</loc>
+        <loc>http://127.0.0.1/xmlformat/</loc>
         <lastmod>2020-12-16T02:12:30+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.jsonformatting.com/jsformat/</loc>
+        <loc>http://127.0.0.1/jsformat/</loc>
         <lastmod>2020-12-16T02:12:30+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.jsonformatting.com/color/</loc>
+        <loc>http://127.0.0.1/color/</loc>
         <lastmod>2020-12-15T08:33:11+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.jsonformatting.com/jsondiff/</loc>
+        <loc>http://127.0.0.1/jsondiff/</loc>
         <lastmod>2020-12-15T06:57:19+00:00</lastmod>
         <priority>0.64</priority>
     </url>
     <url>
-        <loc>https://www.jsonformatting.com/json-to-xml/</loc>
+        <loc>http://127.0.0.1/json-to-xml/</loc>
         <lastmod>2020-12-15T08:26:21+00:00</lastmod>
         <priority>0.64</priority>
     </url>
     <url>
-        <loc>https://www.jsonformatting.com/json-to-java/</loc>
+        <loc>http://127.0.0.1/json-to-java/</loc>
         <lastmod>2020-12-15T08:26:21+00:00</lastmod>
         <priority>0.64</priority>
     </url>
     <url>
-        <loc>https://www.jsonformatting.com/xml-to-json/</loc>
+        <loc>http://127.0.0.1/xml-to-json/</loc>
         <lastmod>2020-12-16T02:12:30+00:00</lastmod>
         <priority>0.64</priority>
     </url>
     <url>
-        <loc>https://www.jsonformatting.com/xmlformat/xml.html</loc>
+        <loc>http://127.0.0.1/xmlformat/xml.html</loc>
         <lastmod>2020-12-15T06:57:19+00:00</lastmod>
         <priority>0.64</priority>
     </url>
     <url>
-        <loc>https://www.jsonformatting.com/xml-to-json/xml2json.html</loc>
+        <loc>http://127.0.0.1/xml-to-json/xml2json.html</loc>
         <lastmod>2020-12-15T06:57:19+00:00</lastmod>
         <priority>0.51</priority>
     </url>

@@ -22,10 +22,6 @@
       height: 320px;
     }
 
-    h1 h2{
-      font-size: 20px !important;
-    }
-
     body {
       overflow: hidden;
     }
@@ -48,7 +44,7 @@
     </div>
     <div class="span7">
       <legend>
-        <h2>Parse Result</h2>
+        Parse Result
       </legend>
       <div class="parse-result">{{outlet rendered}}</div>
     </div>
@@ -57,7 +53,7 @@
 </script>
 
 <script type="text/x-handlebars" data-template-name="xml/paste">
-  <legend><h1>Input XML</h1></legend>
+  <legend>Input XML</legend>
   {{#view App.XmlView}}
     <textarea name="xml" class="field span5" placeholder="Paste raw XML data"><?xml version="1.0" ?>
       <Request>

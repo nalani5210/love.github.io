@@ -37,10 +37,6 @@
     pre {
       margin-left: 120px;
     }
-
-    h1 h2{
-      font-size: 20px !important;
-    }
   </style>
 </head>
 <body>
@@ -69,7 +65,7 @@
 </script>
 
 <script type="text/x-handlebars" data-template-name="xml/paste">
-  <legend><h1>Input XML</h1></legend>
+  <legend>Input XML</legend>
   {{#view App.XmlView}}
     <textarea name="xml" class="field span5" placeholder="Paste raw XML data"><?xml version="1.0" ?>
       <Request>
@@ -91,7 +87,7 @@
 <!--</script>-->
 
 <script type="text/x-handlebars" data-template-name="json">
-  <legend><h2>JSON</h2><div class="pull-right">{{partial "jsonoptions"}}</div></legend>
+  <legend>JSON<div class="pull-right">{{partial "jsonoptions"}}</div></legend>
   <pre>{{json}}</pre>
 </script>
 

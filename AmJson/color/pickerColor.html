@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
     <meta charset="utf-8">
@@ -10,28 +10,17 @@
     <meta name="robots" content="INDEX, FOLLOW">
     <meta property="og:title" content="Color Selector - Color Picker - Html Color">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.jsonformatting.com/">
+    <meta property="og:url" content="https://www.jsonformatting.com">
     <meta property="og:image" content="https://www.jsonformatting.com/assets/icon/json.png">
     <meta property="og:description" content="Color Selector,Finding that perfect color is easier than you think. Use our color picker to discover beautiful colors and harmonies with Hex color codes and RGB values.">
     <meta name="twitter:card" content="summary">
     <script data-ad-client="ca-pub-3292250109309115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <link href="/assets/icon/json.png" rel="icon">
-
-    <link rel="stylesheet" href="/index/index-essats/css/mobirise-icons.css">
-    <link rel="stylesheet" href="/index/index-essats/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/index/index-essats/css/style.css">
-    <link rel="stylesheet" href="/index/index-essats/css/theme-style.css">
-    <link rel="stylesheet" href="/index/index-essats/css/mbr-additional.css">
-    <link rel="stylesheet" href="/color/color-asets/css/common.css" />
-    <link rel="stylesheet" href="/color/color-asets/css/bootstrap.min.css" />
-
+    <link href="/color/color-asets/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
-        h1{
-            font-size: 1.2rem;
-        }
-
-        .justify-content-center div {
-            border: 0;
+        .container {
+            margin-top: 20px;
         }
 
         td {
@@ -42,332 +31,101 @@
             margin-top: 30px;
             margin-left: 5px;
         }
-
-        .nav-link {
-            font-size: 16px;
-        }
     </style>
 </head>
+
 <body>
-<!--最上层导航-->
-<section class="menu cid-qTkzRZLJNu" id="menu1-0">
-    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+<div id="cs" class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1><span class="text-primary">Color Selector</span></h1>
+            <span class="float-right text-muted"><a href="https://www.jsonformatting.com/" title="Visit https://www.jsonformatting.com/">home</a></span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-3">
+                    <div id="chip" class="rounded border border-secondary shadow-sm"></div>
+                </div>
+                <div class="col-9">
+                    <input type="text" class="form-control mb-2" readonly value="rgb(255,255,255)" v-model="rgbcode" />
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">#</span>
+                        </div>
+                        <input type="text" class="form-control" value="FFFFFF" v-model="hexcode" />
+                    </div>
+                </div>
             </div>
-        </button>
-        <div class="menu-logo">
-            <div class="navbar-brand">
-                  <span class="navbar-logo">
-                    <a href="https://www.jsonformatting.com/" target="_blank" title="Visit https://www.jsonformatting.com/">
-                        <img src="/assets/icon/json.png" alt="Online Tools" style="height: 3.8rem;">
-                    </a>
-                  </span>
-                <span class="navbar-caption-wrap">
-                    <a class="navbar-caption text-white display-4" href="https://www.jsonformatting.com/" title="Visit https://www.jsonformatting.com/" target="_blank">
-                        <h1>Color Selector</h1>
-                    </a>
-                </span>
+            <div class="row">
+                <table class="table mt-4 table-sm">
+                    <colgroup>
+                        <col width="" />
+                        <col width="50%" />
+                        <col width="" />
+                        <col width="" />
+                    </colgroup>
+                    <tr>
+                        <th>#</th>
+                        <th>Slider</th>
+                        <th>DEC</th>
+                        <th>HEX</th>
+                    </tr>
+                    <tr>
+                        <td class="pt-2">R</td>
+                        <td><input @mousemove="makecode" v-model="reddec" type="range" class="form-control-range mt-2" min="0" max="255" value="255"></td>
+                        <td><input @keyup="makecode" v-model="reddec" type="number" class="form-control" value="255"></td>
+                        <td><input @keyup="makecode" v-model="redhex" type="text" class="form-control" value="FF"></td>
+                    </tr>
+                    <tr>
+                        <td class="pt-2">G</td>
+                        <td><input @mousemove="makecode" v-model="greendec" type="range" class="form-control-range mt-2" min="0" max="255" value="255"></td>
+                        <td><input @keyup="makecode" v-model="greendec" type="number" class="form-control" value="255"></td>
+                        <td><input @keyup="makecode" v-model="greenhex" type="text" class="form-control" value="FF"></td>
+                    </tr>
+                    <tr>
+                        <td class="pt-2">B</td>
+                        <td><input @mousemove="makecode" v-model="bluedec" type="range" class="form-control-range mt-2" min="0" max="255" value="255"></td>
+                        <td><input @keyup="makecode" v-model="bluedec" type="number" class="form-control" value="255"></td>
+                        <td><input @keyup="makecode" v-model="bluehex" type="text" class="form-control" value="FF"></td>
+                    </tr>
+                </table>
+            </div>
+            <button @click="addchip" type="button" class="btn btn-sm border-primary">Add Color</button>
+            <div class="row">
+                <input type="text" id="copyform" style="position: fixed; top: -10000px;" />
+                <div class="card chip" v-for="(item,index) in chips" style="overflow: hidden;">
+                    <div class="card-body" v-bind:style="{backgroundColor:'#'+item}"></div>
+                    <div @click="copycode('#'+item,index)" @mouseover="showinfo(index)" @mouseout="hideinfo(index)" class="card-footer">#{{ item }}</div>
+                    <div @click="delchip(index)" class="badge badge-danger" v-bind:no="index">&times;</div>
+                    <div class="copyinfo">Copy to clipboard</div>
+                </div>
+            </div>
+            <div class="row" id="recommendation" >
+                <blockquote style="border-left: 4px solid #DDD;padding: 0 15px;color: #777;text-align: left;font-size: 16px;">Don't know what color to choose?
+                    <a href="/random-color/">See my recommendation</a></blockquote>
             </div>
         </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
-                <li class="nav-item">
-                    <a class="nav-link link text-white display-4" title="Visit https://www.jsonformatting.com/" href="https://www.jsonformatting.com/">
-                        <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>HOME</a>
-                </li>
-            </ul>
+        <div class="card-header">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- 横向广告位 -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-3292250109309115"
+                 data-ad-slot="2574845222"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
-    </nav>
-</section>
+    </div>
+</div>
 
-<section class="mbr-section form1 cid-rdbncPfKM0" id="form1-14">
-    <div class="container">
-        <div class="row">
-            <div id="cs" class="container">
-                <div class="card">
-                    <div class="card-header">
-                        <h1><span class="text-primary">Color Selector</span></h1>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-3">
-                                <div id="chip" class="rounded border border-secondary shadow-sm"></div>
-                            </div>
-                            <div class="col-9">
-                                <input type="text" class="form-control mb-2" readonly value="rgb(255,255,255)" v-model="rgbcode" />
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">#</span>
-                                    </div>
-                                    <input type="text" class="form-control" value="FFFFFF" v-model="hexcode" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <table class="table mt-4 table-sm">
-                                <colgroup>
-                                    <col width="" />
-                                    <col width="50%" />
-                                    <col width="" />
-                                    <col width="" />
-                                </colgroup>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Slider</th>
-                                    <th>DEC</th>
-                                    <th>HEX</th>
-                                </tr>
-                                <tr>
-                                    <td class="pt-2">R</td>
-                                    <td><input @mousemove="makecode" v-model="reddec" type="range" class="form-control-range mt-2" min="0" max="255" value="255"></td>
-                                    <td><input @keyup="makecode" v-model="reddec" type="number" class="form-control" value="255"></td>
-                                    <td><input @keyup="makecode" v-model="redhex" type="text" class="form-control" value="FF"></td>
-                                </tr>
-                                <tr>
-                                    <td class="pt-2">G</td>
-                                    <td><input @mousemove="makecode" v-model="greendec" type="range" class="form-control-range mt-2" min="0" max="255" value="255"></td>
-                                    <td><input @keyup="makecode" v-model="greendec" type="number" class="form-control" value="255"></td>
-                                    <td><input @keyup="makecode" v-model="greenhex" type="text" class="form-control" value="FF"></td>
-                                </tr>
-                                <tr>
-                                    <td class="pt-2">B</td>
-                                    <td><input @mousemove="makecode" v-model="bluedec" type="range" class="form-control-range mt-2" min="0" max="255" value="255"></td>
-                                    <td><input @keyup="makecode" v-model="bluedec" type="number" class="form-control" value="255"></td>
-                                    <td><input @keyup="makecode" v-model="bluehex" type="text" class="form-control" value="FF"></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <button @click="addchip" type="button" class="btn btn-sm border-primary">Add Color</button>
-                        <div class="row">
-                            <input type="text" id="copyform" style="position: fixed; top: -10000px;" />
-                            <div class="card chip" v-for="(item,index) in chips" style="overflow: hidden;">
-                                <div class="card-body" v-bind:style="{backgroundColor:'#'+item}"></div>
-                                <div @click="copycode('#'+item,index)" @mouseover="showinfo(index)" @mouseout="hideinfo(index)" class="card-footer">#{{ item }}</div>
-                                <div @click="delchip(index)" class="badge badge-danger" v-bind:no="index">&times;</div>
-                                <div class="copyinfo">Copy to clipboard</div>
-                            </div>
-                        </div>
-                        <div class="row" id="recommendation" >
-                            <blockquote style="border-left: 4px solid #DDD;padding: 0 15px;color: #777;text-align: left;font-size: 16px;">Don't know what color to choose?
-                                <a href="/random-color/">See my recommendation</a></blockquote>
-                        </div>
-                    </div>
-                    <div class="card-header">
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <!-- 横向广告位 -->
-                        <ins class="adsbygoogle"
-                             style="display:block"
-                             data-ad-client="ca-pub-3292250109309115"
-                             data-ad-slot="2574845222"
-                             data-ad-format="auto"
-                             data-full-width-responsive="true"></ins>
-                        <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section class="mbr-section content4 single-div-title" id="content4-1b">
-    <div class="container">
-        <div class="media-container-row">
-            <div class="title col-12 col-md-8">
-                <h4 class="align-center pb-3 mbr-fonts-style display-5">
-                    TOOLS
-                </h4>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="features10 cid-rd4LTOBu7T" id="features10-2e">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
-                <div class="media mb-3">
-                    <div class="card-img align-self-center">
-                        <a href="/jsonformat/" target="_blank" title="json format"><span class="mbr-iconfont mbri-website-theme" style="color: rgb(20, 157, 204); fill: rgb(20, 157, 204);"></span></a>
-                    </div>
-                    <h2 class="card-title media-body py-3 mbr-fonts-style display-7" style="text-align: left"><a href="/jsonformat/" target="_blank" class="text-black" title="json format"><strong>JSON Formatter</strong></a></h2>
-                </div>
-                <div class="card-box">
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
-                <div class="media mb-3">
-                    <div class="card-img align-self-center">
-                        <a href="/xmlformat/" target="_blank" title="xml format"><span class="mbr-iconfont mbri-website-theme" style="color: rgb(20, 157, 204); fill: rgb(20, 157, 204);"></span></a>
-                    </div>
-                    <h2 class="card-title media-body py-3 mbr-fonts-style display-7" style="text-align: left"><a href="/xmlformat/" target="_blank" class="text-black" title="xml format"><strong>XML Formatter</strong></a></h2>
-                </div>
-                <div class="card-box">
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
-                <div class="media mb-3">
-                    <div class="card-img align-self-center">
-                        <a href="/htmlformat/" target="_blank" title="html foramt"><span class="mbr-iconfont mbri-website-theme" style="color: rgb(20, 157, 204); fill: rgb(20, 157, 204);"></span></a>
-                    </div>
-                    <h2 class="card-title media-body py-3 mbr-fonts-style display-7" style="text-align: left"><a href="/htmlformat/" target="_blank" class="text-black" title="html foramt"><strong>HTML Format</strong></a></h2>
-                </div>
-                <div class="card-box">
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
-                <div class="media mb-3">
-                    <div class="card-img align-self-center">
-                        <a href="/jsformat/" target="_blank" title="javascript format"><span class="mbr-iconfont mbri-website-theme" style="color: rgb(20, 157, 204); fill: rgb(20, 157, 204);"></span></a>
-                    </div>
-                    <h2 class="card-title media-body py-3 mbr-fonts-style display-7" style="text-align: left"><a href="/jsformat/" target="_blank" class="text-black" title="javascript format"><strong>JS Format</strong></a></h2>
-                </div>
-                <div class="card-box">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="features10 cid-rd4LVxbraW" id="features10-2g">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
-                <div class="media mb-3">
-                    <div class="card-img align-self-center">
-                        <a href="/jsoncompare/" target="_blank" title="json compare"><span class="mbr-iconfont mbri-website-theme" style="color: rgb(20, 157, 204); fill: rgb(20, 157, 204);"></span></a>
-                    </div>
-                    <h2 class="card-title media-body py-3 mbr-fonts-style display-7" style="text-align: left"><a href="/jsoncompare/" target="_blank" class="text-black" title="json compare"><strong>JSON Compare</strong></a></h2>
-                </div>
-                <div class="card-box">
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
-                <div class="media mb-3">
-                    <div class="card-img align-self-center">
-                        <a href="/json-to-xml/" target="_blank" title="json-to-xml"><span class="mbr-iconfont mbri-share" style="color: rgb(20, 157, 204); fill: rgb(20, 157, 204);"></span></a>
-                    </div>
-                    <h2 class="card-title media-body py-3 mbr-fonts-style display-7" style="text-align: left"><a href="/json-to-xml/" target="_blank" class="text-black" title="json-to-xml"><strong>JSON TO XML</strong></a></h2>
-                </div>
-                <div class="card-box">
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
-                <div class="media mb-3">
-                    <div class="card-img align-self-center">
-                        <a href="/json-to-java/" target="_blank" title="json-to-java"><span class="mbr-iconfont mbri-share" style="color: rgb(20, 157, 204); fill: rgb(20, 157, 204);"></span></a>
-                    </div>
-                    <h2 class="card-title media-body py-3 mbr-fonts-style display-7" style="text-align: left"><a href="/json-to-java/" target="_blank" class="text-black" title="json-to-java"><strong>JSON TO JAVA</strong></a></h2>
-                </div>
-                <div class="card-box">
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
-                <div class="media mb-3">
-                    <div class="card-img align-self-center">
-                        <a href="/xml-to-json/" target="_blank" title="xml-to-json"><span class="mbr-iconfont mbri-share" style="color: rgb(20, 157, 204); fill: rgb(20, 157, 204);"></span></a>
-                    </div>
-                    <h2 class="card-title media-body py-3 mbr-fonts-style display-7" style="text-align: left"><a href="/xml-to-json/" target="_blank" class="text-black" title="xml-to-json"><strong>XML TO JSON</strong></a></h2>
-                </div>
-                <div class="card-box">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="features10 cid-rd4LWizQrU" id="features10-2h">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
-                <div class="media mb-3">
-                    <div class="card-img align-self-center">
-                        <a href="/md5/" target="_blank" title="MD5 HASH"><span class="mbr-iconfont mbri-lock" style="color: rgb(20, 157, 204); fill: rgb(20, 157, 204);"></span></a>
-                    </div>
-                    <h2 class="card-title media-body py-3 mbr-fonts-style display-7" style="text-align: left"><a href="/md5/" target="_blank" class="text-black" title="MD5 HASH"><strong>MD5 HASH</strong></a></h2>
-                </div>
-                <div class="card-box">
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
-                <div class="media mb-3">
-                    <div class="card-img align-self-center">
-                        <a href="/color/" target="_blank" title="Color Selector"><span class="mbr-iconfont mbri-pages" style="color: rgb(20, 157, 204); fill: rgb(20, 157, 204);"></span></a>
-                    </div>
-                    <h2 class="card-title media-body py-3 mbr-fonts-style display-7" style="text-align: left"><a href="/color/" target="_blank" class="text-black" title="Color Selector"><strong>Color Selector</strong></a></h2>
-                </div>
-                <div class="card-box">
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
-                <div class="media mb-3">
-                    <div class="card-img align-self-center">
-                        <a href="https://github.com/pingfangushi/screw" target="_blank" title="visit https://github.com/pingfangushi/screw"><span class="mbr-iconfont mbri-to-local-drive" style="color: rgb(20, 157, 204); fill: rgb(20, 157, 204);"></span></a>
-                    </div>
-                    <h4 class="card-title media-body py-3 mbr-fonts-style display-7"><a href="https://github.com/pingfangushi/screw" target="_blank" class="text-black" title="visit https://github.com/pingfangushi/screw"><strong>Table structure generator</strong></a></h4>
-                </div>
-                <div class="card-box">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="cid-rcYgJaHLCV mbr-reveal" id="footer1-13">
-    <div class="container">
-        <div class="media-container-row content text-white">
-            <div class="col-12 col-md-3">
-                <div class="media-wrap">
-                    <a href="https://www.jsonformatting.com/">
-                        <img src="/assets/icon/json.png" title="Online Tools">
-                    </a>
-                </div>
-            </div>
-            <div class="col-12 col-md-3 mbr-fonts-style display-7">
-                <h5 class="pb-3">
-                    Contacts
-                </h5>
-                <p class="mbr-text">
-                    Email: nalani5210@gmail.com
-                    <br><br>
-                </p>
-            </div>
-            <div class="col-12 col-md-3 mbr-fonts-style display-7">
-                <h5 class="pb-3">
-                    Links
-                </h5>
-                <p class="mbr-text"><a class="text-black" href="https://github.com/pingfangushi/screw" title="screw" target="_blank">Table structure generator</a><br><br><br></p>
-            </div>
-        </div>
-        <div class="footer-lower">
-            <div class="media-container-row">
-                <div class="col-sm-12">
-                    <hr>
-                </div>
-            </div>
-            <div class="media-container-row mbr-white">
-                <div class="col-sm-6 copyright">
-                    <p class="mbr-text mbr-fonts-style display-7">
-                        © 2018 - 2020
-                        <a href="/" title="Visit https://www.jsonformatting.com">JSONFormatting</a> -
-                        <a href="/private/" title="Visit Privacy Policy">Privacy Policy</a>
-                    </p>
-                </div>
-                <div class="col-md-6">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i></i></a></div>
-<script src="/index/index-essats/js/jquery.min.js"></script>
-<script src="/index/index-essats/js/bootstrap.min.js"></script>
-<script src="/index/index-essats/js/smooth-scroll.js"></script>
-<script src="/index/index-essats/js/jquery.touch-swipe.min.js"></script>
-<script src="/index/index-essats/js/script.js"></script>
+
+<script src="/color/color-asets/js/jquery-3.4.1.min.js"></script>
 <script src="/color/color-asets/js/vue.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="/color/color-asets/js/script.js"></script>
 </body>
 </html>

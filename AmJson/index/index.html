@@ -2,12 +2,14 @@
 <html lang="en" class="no-js">
 
 <head>
-    <title>Free Online Tools to Beautify, Validate, Analyse, Convert JSON, XML, JavaScript, CSS, HTML, Excel - Best Online Developer Tools</title>
-    <meta name="twitter:title" content="Best free online Developer Tools">
-    <meta property=og:title content="Best free online Developer Tools">
-    <meta name="twitter:description" content="Free Online Tools to Beautify, Validate, Analyse, Convert JSON, XML, JavaScript, CSS, HTML, Excel - Best Online Developer Tools.">
-    <meta name="description" content="Free Online Tools to Beautify, Validate, Analyse, Convert JSON, XML, JavaScript, CSS, HTML, Excel - Best Online Developer Tools.">
-    <meta property=og:description content="Free Online Tools to Beautify, Validate, Analyse, Convert JSON, XML, JavaScript, CSS, HTML, Excel - Best Online Developer Tools.">
+<!--    <title>Free Online Tools to Beautify, Validate, Analyse, Convert JSON, XML, JavaScript, CSS, HTML, Excel - Best Online Developer Tools</title>-->
+    <title>JSON Formatter - JSON Formatter Online - JSON Validator - JSON Format</title>
+    <meta name="twitter:title" content="JSON Formatter - JSON Formatter Online - JSON Validator - JSON Format">
+    <meta property=og:title content="JSON Formatter - JSON Formatter Online - JSON Validator - JSON Format">
+<!--    <meta name="twitter:description" content="Free Online Tools to Beautify, Validate, Analyse, Convert JSON, XML, JavaScript, CSS, HTML, Excel - Best Online Developer Tools.">-->
+    <meta name="twitter:description" content="JSON Formatter,JSON Validator provides online formatting and verification of JSON. It can better help you use JSON and make the format of JSON clearer.">
+    <meta name="description" content="JSON Formatter,JSON Validator provides online formatting and verification of JSON. It can better help you use JSON and make the format of JSON clearer.">
+    <meta property=og:description content="JSON Formatter,JSON Validator provides online formatting and verification of JSON. It can better help you use JSON and make the format of JSON clearer.">
     <meta name="twitter:url" content="https://www.jsonformatting.com/">
     <meta property="og:url" content="https://www.jsonformatting.com/">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
@@ -36,16 +38,16 @@
     <link rel="stylesheet" href="/index/index-essats/css/style.css">
     <link rel="stylesheet" href="/index/index-essats/css/theme-style.css">
     <link rel="stylesheet" href="/index/index-essats/css/mbr-additional.css">
+    <link rel="stylesheet" href="/jsonformat/jsonformat-assets/css/format.css">
     <style>
-        h2 {
-            text-align: center;
+        h1 {
+            font-size: 16px;
+            color: white;
+            cursor:pointer;
         }
 
-        #ads {
-            background: white;
-            margin: 0 auto;
-            width: 60%;
-            height: 60%;
+        h2 {
+            text-align: center;
         }
     </style>
 </head>
@@ -69,7 +71,7 @@
 <img src="/assets/icon/json.png" alt="Online Tools" style="height: 3.8rem;">
 </a>
 </span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="https://www.jsonformatting.com/" title="Visit https://www.jsonformatting.com/" target="_blank">Online Tools<br></a></span>
+                <h1>JSON Formatter</h1>
             </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -86,8 +88,9 @@
         </div>
     </nav>
 </section>
+
 <!--导航下面一行   图片+文字-->
-<section class="mbr-section content5 cid-rd4W4uE8Af mbr-parallax-background" id="content5-2n">
+<!--<section class="mbr-section content5 cid-rd4W4uE8Af mbr-parallax-background" id="content5-2n">
     <div class="container">
         <div class="media-container-row">
             <div class="title col-12 col-md-8">
@@ -97,14 +100,41 @@
             </div>
         </div>
     </div>
+</section>-->
+
+<section class="mbr-section form1 cid-rdbncPfKM0" id="form1-14">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group" data-for="message">
+                    <textarea id="rawJson" class="form-control" rows="20" placeholder="Input Json String..."></textarea>
+                </div>
+                <div class="input-group-btn">
+                    <input id="button" type="button" value="Format & Validate" class="btn btn-primary" onclick="Process()"> indent
+                    <select id="TabSize" onchange="TabSizeChanged()" class="select_theme">
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mbr-figure">
+                    <div id="canvas" class="canvas"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section class="cid-rcYe6fBSWK">
+<section style="height: 180px !important; background: white">
     <div class="ads-div">
         <div id="ads">
             <div class="HeadersRow">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- 横向广告位 -->
                 <ins class="adsbygoogle"
                      style="display:block"
                      data-ad-client="ca-pub-3292250109309115"
@@ -172,7 +202,6 @@
         </div>
     </div>
 </section>
-
 <section class="features1 cid-rd2jyziOZK" id="features1-1b">
     <div class="container">
         <div class="media-container-row">
@@ -327,6 +356,7 @@
         </div>
     </div>
 </section>
+
 
 <section class="cid-rcYe6fBSWK">
     <div class="ads-div">
@@ -540,7 +570,7 @@
 <script src="/index/index-essats/js/smooth-scroll.js"></script>
 <script src="/index/index-essats/js/jquery.touch-swipe.min.js"></script>
 <script src="/index/index-essats/js/script.js"></script>
-
+<script src="/jsonformat/jsonformat-assets/js/core.min.js"></script>
 </body>
 
 </html>

@@ -316,6 +316,14 @@
     height: 370px;
 }
 
+.classh4 {
+    border: 1px solid #dfdfdf;
+    padding: 1.3rem 2rem;
+    margin-bottom: 0;
+    font-family: rubik,sans-serif;
+    font-size: 1.5rem;
+}
+
 #ads,#ads-two {
     background: white;
     margin: 0 auto;

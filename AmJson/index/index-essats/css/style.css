@@ -316,15 +316,7 @@
     height: 370px;
 }
 
-#ads {
-    background: white ;
-    margin: 0 auto;
-    width: 60%;
-    height: 60%;
-}
-
-#ads-two {
-    margin-top: 20px;
+#ads,#ads-two {
     background: white;
     margin: 0 auto;
     width: 60%;
@@ -333,4 +325,8 @@
 
 .ads-div {
     margin-top: -20px;
+}
+
+.ads-div-two {
+    margin-top: 0;
 }

@@ -316,7 +316,15 @@
     height: 370px;
 }
 
-#ads,#ads-two {
+#ads {
+    background: white ;
+    margin: 0 auto;
+    width: 60%;
+    height: 60%;
+}
+
+#ads-two {
+    margin-top: 20px;
     background: white;
     margin: 0 auto;
     width: 60%;

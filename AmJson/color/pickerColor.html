@@ -26,8 +26,11 @@
     <link rel="stylesheet" href="/color/color-asets/css/common.css" />
 
     <style>
-        h1{
-            font-size: 1.2rem;
+        h1 {
+            font-size: 16px;
+            cursor:pointer;
+            float: right;
+            margin-top: 6px;
         }
 
         .justify-content-center div {
@@ -88,41 +91,68 @@
     </style>
 </head>
 <body>
-<!--最上层导航-->
-<section class="menu cid-qTkzRZLJNu" id="menu1-0">
-    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </button>
-        <div class="menu-logo">
-            <div class="navbar-brand">
-                  <span class="navbar-logo">
-                    <a href="https://www.jsonformatting.com/" target="_blank" title="Visit https://www.jsonformatting.com/">
-                        <img src="/assets/icon/json.png" alt="website icon" style="height: 60px; width: 60px">
-                    </a>
-                  </span>
-                <span class="navbar-caption-wrap">
-                    <a class="navbar-caption text-white display-4" href="https://www.jsonformatting.com/" title="Visit https://www.jsonformatting.com/" target="_blank">
-                        <h1>Color Selector</h1>
-                    </a>
-                </span>
-            </div>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
-                <li class="nav-item">
-                    <a class="nav-link link text-white display-4" title="Visit https://www.jsonformatting.com/" href="https://www.jsonformatting.com/">
-                        <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>HOME</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</section>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+    <a class="navbar-brand" href="#">
+        <img src="/assets/icon/json.png" width="30" height="30" class="d-inline-block align-top" alt="website image" loading="lazy">
+        <h1>Color Selector</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-Formatters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Formatters
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/jsonformat/">JSON Formatter & Validator</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/xmlformat/">XML Formatter</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/htmlformat/">HTML Formatter</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/jsformat/">Javascript Formatter</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/jsoncompare/">JSON Compare</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-Conversion" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Conversion
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/json-to-xml/">JSON To XML</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/json-to-java/">JSON To JAVA</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/xml-to-json/">XML To JSON</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-Development" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Development
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/color/">Color Selector</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-Encode" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Encode/Decoders
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/md5/">MD5 HASH</a>
+                </div>
+            </li>
+        </ul>
+        <a href="/" title="Visit https://www.jsonformatting.com/">
+            <button type="button" class="btn btn-danger" style="padding: 6px 8px;" href="/">HOME</button>
+        </a>
+    </div>
+</nav>
 
 <section class="mbr-section form1 cid-rdbncPfKM0" id="form1-14">
     <div class="container">

@@ -35,7 +35,7 @@ function Process() {
 }
 function processMd5() {
     try {
-        $id("canvas").innerHTML = "<PRE class='CodeContainer'>" + md5(rawJson.value)  + "<div style='float: right;margin-top: -20px'><img data-toggle=\"tooltip\" data-placement=\"top\" src=\"/index/index-assets/svg/copy-blue.svg\" id=\"copy\" title=\"copy to Clipboard\" style='float: right;position: sticky;' width=\"20\" height=\"20\" /></div>" + "</PRE>";
+        $id("canvas").innerHTML = "<PRE class='CodeContainer'>" + md5(rawJson.value)  + "</PRE>";
     } catch(e) {
         $id("canvas").innerHTML = "<PRE class='CodeContainerError'><span style='color: red'>" + e.message + " , Please check the JSON format</span></PRE>"
     }
@@ -200,16 +200,3 @@ function MultiplyString(e, n) {
     }
     return a.join("")
 }
-
-$(document).on('click', '#copy', function() {
-    const input = document.createElement('textarea');
-    document.body.appendChild(input);
-    input.value = md5($("#rawJson").val());
-    input.select();
-    if (document.execCommand('copy')) {
-        document.execCommand('copy');
-        $(".show").remove();
-        $(".form-group").append("<div style='margin-top: 10px;' class=\"alert alert-success alert-dismissible fade show\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>Copied to Clipboard.</div>");
-    }
-    document.body.removeChild(input);
-});

@@ -19,12 +19,13 @@
     <script data-ad-client="ca-pub-3292250109309115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <link href="/assets/icon/json.png" rel="icon">
 
-    <link rel="stylesheet" href="/index/index-essats/css/mobirise-icons.css">
-    <link rel="stylesheet" href="/index/index-essats/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/index/index-essats/css/style.css">
-    <link rel="stylesheet" href="/index/index-essats/css/theme-style.css">
-    <link rel="stylesheet" href="/index/index-essats/css/mbr-additional.css">
-    <link rel="stylesheet" href="/json-format/json-format-assets/css/format.css">
+    <link rel="stylesheet" href="/index/index-assets/css/mobirise-icons.css" rel="preload" as="style">
+    <link rel="stylesheet" href="/index/index-assets/css/bootstrap.min.css" media="none" onload="this.media='all'">
+    <link rel="stylesheet" href="/index/index-assets/css/style.css" media="none" onload="this.media='all'">
+    <link rel="stylesheet" href="/index/index-assets/css/theme-style.css">
+    <link rel="stylesheet" href="/index/index-assets/css/mbr-additional.css">
+    <link rel="stylesheet" href="/json-format/json-format-assets/css/format.css" media="none" onload="this.media='all'">
+    <link rel="stylesheet" href="/index/index-assets/css/code.css" />
     <style>
         h1 {
             font-size: 16px;
@@ -32,6 +33,12 @@
             float: right;
             margin-top: 6px;
         }
+
+        h2 {
+            text-align: center;
+        }
+
+
     </style>
 </head>
 <body>
@@ -104,27 +111,26 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <div class="form-group" data-for="message">
-                    <textarea id="rawJson" class="form-control" rows="20" placeholder="Input Json String..."></textarea>
+                <div class="editor-box2">
+                    <div id="editor" style="height: auto !important;" >
+                        <textarea id="code"></textarea>
+                        <img src="/index/index-assets/svg/file.svg"    id="json-forrmat-file" title="load file" style='z-index: 9999;float: right;position: inherit;margin-top: -35px;margin-right: 25px;' width="20" height="20" />
+                        <img src="/index/index-assets/svg/delete.svg"  id="delete" title="delete" style='z-index: 9999;float: right;position: inherit;margin-top: -65px;margin-right: 25px;' width="20" height="20" />
+                    </div>
                 </div>
                 <div class="input-group-btn">
-                    <input id="button" type="button" value="Format & Validate" class="btn btn-primary" onclick="Process()"> indent
-                    <select id="TabSize" onchange="TabSizeChanged()" class="select_theme">
-                        <option value="1">1</option>
-                        <option value="2" selected>2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                    </select>
+                    <button type="button" class="btn btn-primary" id="compressionJson">Format & Validate</button>
+                    <input type="file" class="btn btn-primary" style="display: none" id="json-forrmat-loadfile"/>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="mbr-figure">
-                    <div id="canvas" class="canvas"></div>
+                <div class="resizable-textarea" id="resultPre" >
+                    <div id="Canvas" class="Canvas well resizable processed">
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </section>
 
@@ -425,9 +431,22 @@
 </section>
 <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><span style="text-align: center;"><i></i></span></div>
 
-<script defer src="/index/index-essats/js/jquery.min.js"></script>
-<script defer src="/index/index-essats/js/bootstrap.min.js"></script>
-<script defer src="/index/index-essats/js/script.js"></script>
-<script defer src="/json-format/json-format-assets/js/core.min.js"></script>
+<script defer src="/index/index-assets/js/bootstrap.min.js"></script>
+<script defer src="/index/index-assets/js/script.js"></script>
+<script src="/index/index-assets/js/global.js"></script>
+<script src="/index/index-assets/js/indexCodeMirror.js"></script>
+<script src="/index/index-assets/js/color.js"></script>
+
+<script type="text/javascript">
+    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        mode: "application/json", //设置json模式
+        lineNumbers: true, //是否显示左边换行术字
+        lineWrapping: true, //是否折叠
+        foldGutter: true,
+        theme : 'dracula',
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+        autofocus: true
+    });
+</script>
 </body>
 </html>

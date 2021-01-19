@@ -177,3 +177,31 @@ function XML2JSON(xml, tab) {
     return vkbeautify.json("{\n" + tab + (tab ? json.replace(/\t/g, tab) : json.replace(/\t|\n/g, "")) + "\n}");
 }
 
+$('#html-forrmat-file').click(function() {
+    $("#html-forrmat-loadfile").click();
+});
+
+$('#html-forrmat-loadfile').change(function() {
+    var reader = new FileReader();
+    reader.onload = function(event) {
+        $("#source").val(event.target.result);
+    }
+    reader.readAsText(this.files[0]);
+});
+
+$('#delete').click(function() {
+    $("#source").val("");
+});
+
+$(document).on('click', '#copy', function() {
+    const input = document.createElement('textarea');
+    document.body.appendChild(input);
+    input.value = $("#source").val();
+    input.select();
+    if (document.execCommand('copy')) {
+        document.execCommand('copy');
+        $(".show").remove();
+        $(".col-md-12>.form-group>.form-group").append("<div style='margin-top: 10px;' class=\"alert alert-success alert-dismissible fade show\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>Copied to Clipboard.</div>");
+    }
+    document.body.removeChild(input);
+});

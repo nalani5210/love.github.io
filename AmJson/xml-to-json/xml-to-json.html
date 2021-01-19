@@ -19,11 +19,12 @@
     <script data-ad-client="ca-pub-3292250109309115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
     <link href="/assets/icon/json.png" rel="icon">
-    <link rel="stylesheet" href="/index/index-essats/css/mobirise-icons.css">
-    <link rel="stylesheet" href="/index/index-essats/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/index/index-essats/css/style.css">
-    <link rel="stylesheet" href="/index/index-essats/css/theme-style.css">
-    <link rel="stylesheet" href="/index/index-essats/css/mbr-additional.css">
+    <link rel="stylesheet" href="/index/index-assets/css/mobirise-icons.css">
+    <link rel="stylesheet" href="/index/index-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/index/index-assets/css/style.css">
+    <link rel="stylesheet" href="/index/index-assets/css/theme-style.css">
+    <link rel="stylesheet" href="/index/index-assets/css/mbr-additional.css">
+
     <style>
         h1 {
             font-size: 16px;
@@ -38,6 +39,10 @@
 
         .cid-rdbncPfKM0 {
             padding-top: 30px;
+        }
+
+        img:hover{
+            cursor:pointer
         }
     </style>
 </head>
@@ -117,6 +122,9 @@
                     <div id="canvas" class="canvas"></div>
                     <div class="form-group" data-for="message">
                         <textarea class="form-control" rows="20" id="source" placeholder="Input Xml String..." ></textarea>
+                        <img src="/index/index-assets/svg/file.svg"    id="html-forrmat-file" title="load file" style='float: right;position: sticky;margin-top: -35px;margin-right: 25px;' width="20" height="20" />
+                        <img src="/index/index-assets/svg/delete.svg"  id="delete" title="delete" style='float: right;position: sticky;margin-top: -65px;margin-right: 25px;' width="20" height="20" />
+                        <img data-toggle="tooltip" data-placement="top" src="/index/index-assets/svg/copy-blue.svg" id="copy" title="copy to Clipboard" style='float: right;position: sticky;margin-top: -95px;margin-right: 25px;' width="20" height="20" />
                     </div>
                     <div class="input-group-btn">
                         <input id="btn_xml_parser" type="button" value="Xml To Json" class="btn btn-primary" onclick="process()" >
@@ -353,11 +361,12 @@
     </div>
 </section>
 <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><span style="text-align: center;"><i></i></span></div>
+<input type="file" class="btn btn-primary" style="display: none" id="html-forrmat-loadfile"/>
 
-<script defer src="/index/index-essats/js/jquery.min.js"></script>
-<script defer src="/index/index-essats/js/bootstrap.min.js"></script>
-<script defer src="/index/index-essats/js/script.js"></script>
-<script src="/xml-format/xml-format-assets/js/vkbeautify.js"></script>
+<script src="/index/index-assets/js/jquery.min.js"></script>
+<script defer src="/index/index-assets/js/bootstrap.min.js"></script>
+<script defer src="/index/index-assets/js/script.js"></script>
+<script defer src="/xml-format/xml-format-assets/js/vkbeautify.js"></script>
 <script src="/xml-to-json/xml-to-json-assest/js/xml2json.js"></script>
 <script>
     function process() {

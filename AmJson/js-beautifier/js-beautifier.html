@@ -19,11 +19,12 @@
     <script data-ad-client="ca-pub-3292250109309115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <link href="/assets/icon/json.png" rel="icon">
 
-    <link rel="stylesheet" href="/index/index-essats/css/mobirise-icons.css">
-    <link rel="stylesheet" href="/index/index-essats/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/index/index-essats/css/style.css">
-    <link rel="stylesheet" href="/index/index-essats/css/theme-style.css">
-    <link rel="stylesheet" href="/index/index-essats/css/mbr-additional.css">
+    <link rel="stylesheet" href="/index/index-assets/css/mobirise-icons.css">
+    <link rel="stylesheet" href="/index/index-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/index/index-assets/css/style.css">
+    <link rel="stylesheet" href="/index/index-assets/css/theme-style.css">
+    <link rel="stylesheet" href="/index/index-assets/css/mbr-additional.css">
+    <link rel="stylesheet" href="/index/index-assets/css/code.css" />
     <style>
         h1 {
             font-size: 16px;
@@ -38,6 +39,22 @@
 
         .cid-rdbncPfKM0 {
             padding-top: 30px;
+        }
+
+        #editor {
+            border:1px solid #ddd;
+            width:100%;
+            margin-bottom:22px;
+            position:relative;
+            border-radius:3px
+        }
+
+        #editor:focus {
+            color: #495057;
+            background-color: #fff;
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
         }
     </style>
 </head>
@@ -111,6 +128,20 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                <div class="editor-box2">
+                    <div id="editor" style="height: auto !important;" >
+                        <textarea id="code" class="form-control"></textarea>
+                        <img src="/index/index-assets/svg/file.svg"    id="html-forrmat-file" title="load file" style='z-index: 9999 ;float: right;position: inherit;margin-top: -35px;margin-right: 25px;' width="20" height="20" />
+                        <img src="/index/index-assets/svg/delete.svg"  id="delete" title="delete" style='z-index: 9999;float: right;position: inherit;margin-top: -65px;margin-right: 25px;' width="20" height="20" />
+                        <img data-toggle="tooltip" data-placement="top" src="/index/index-assets/svg/copy-blue.svg" id="copy" title="copy to Clipboard" style='z-index: 9999 ;float: right;position: inherit;margin-top: -95px;margin-right: 25px;' width="20" height="20" />
+                    </div>
+                </div>
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-primary" id="jshtmlFormatBeautify">Format & Validate</button>
+                    <input type="file" class="btn btn-primary" style="display: none" id="html-forrmat-loadfile"/>
+                </div>
+            </div>
+            <!--<div class="col-md-12">
                 <div class="form-group" data-for="message">
                     <label class="form-control-label mbr-fonts-style display-7">
                     </label>
@@ -121,7 +152,7 @@
                         <input id="button" type="button" value="Format" class="btn btn-primary" onclick="process()">
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </section>
@@ -382,17 +413,22 @@
     </div>
 </section>
 <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><span style="text-align: center;"><i></i></span></div>
+<input type="hidden" id="tabsize" value="1" />
 
-<script defer src="/index/index-essats/js/jquery.min.js"></script>
-<script defer src="/index/index-essats/js/bootstrap.min.js"></script>
-<script defer src="/index/index-essats/js/script.js"></script>
-<script src="/js-beautifier/js-beautifier-assets/js/beautify.js"></script>
-<script>
-    function process() {
-        var obj = $("#editor").val();
-        var string = js_beautify(obj,"");
-        $("#editor").val(string);
-    }
+<script defer src="/index/index-assets/js/bootstrap.min.js"></script>
+<script defer src="/index/index-assets/js/script.js"></script>
+<script src="/index/index-assets/js/global.js"></script>
+<script src="/index/index-assets/js/indexCodeMirror.js"></script>
+<script defer src="/html-formatter/html-formatter-assets/js/jsformat.js"></script>
+<script type="text/javascript">
+    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        mode: "javascript",
+        lineNumbers: true, //是否显示左边换行术字
+        lineWrapping: true, //是否折叠
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+        autofocus: true
+    });
 </script>
 </body>
 </html>

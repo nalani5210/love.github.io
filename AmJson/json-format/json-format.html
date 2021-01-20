@@ -113,7 +113,7 @@
             <div class="col-md-6">
                 <div class="editor-box2">
                     <div id="editor" style="height: auto !important;" >
-                        <textarea id="code"></textarea>
+                        <textarea id="code"  ></textarea>
                         <img src="/index/index-assets/svg/file.svg"    id="json-forrmat-file" title="load file" style='z-index: 9999;float: right;position: inherit;margin-top: -35px;margin-right: 25px;' width="20" height="20" />
                         <img src="/index/index-assets/svg/delete.svg"  id="delete" title="delete" style='z-index: 9999;float: right;position: inherit;margin-top: -65px;margin-right: 25px;' width="20" height="20" />
                     </div>
@@ -439,11 +439,11 @@
 
 <script type="text/javascript">
     var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        theme: 'duotone-light',
         mode: "application/json", //设置json模式
         lineNumbers: true, //是否显示左边换行术字
         lineWrapping: true, //是否折叠
         foldGutter: true,
-        theme : 'dracula',
         gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
         autofocus: true
     });

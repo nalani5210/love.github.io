@@ -113,7 +113,7 @@
             <div class="col-md-12">
                 <div class="editor-box2">
                     <div id="editor" style="height: auto !important;" >
-                        <textarea id="code" class="form-control"></textarea>
+                        <textarea id="code" class="form-control"  ></textarea>
                         <img src="/index/index-assets/svg/file.svg"    id="html-forrmat-file" title="load file" style='z-index: 9999 ;float: right;position: inherit;margin-top: -35px;margin-right: 25px;' width="20" height="20" />
                         <img src="/index/index-assets/svg/delete.svg" id="delete" title="delete" style='z-index: 9999;float: right;position: inherit;margin-top: -65px;margin-right: 25px;' width="20" height="20" />
                         <img data-toggle="tooltip" data-placement="top" src="/index/index-assets/svg/copy-blue.svg" id="copy" title="copy to Clipboard" style='z-index: 9999 ;float: right;position: inherit;margin-top: -95px;margin-right: 25px;' width="20" height="20" />
@@ -129,7 +129,7 @@
                     <label class="form-control-label mbr-fonts-style display-7">
                     </label>
                     <div id="canvas">
-                        <textarea class="form-control" rows="20" id="editor" placeholder="Input Html String..."></textarea>
+                        <textarea class="form-control" rows="20" id="editor" ></textarea>
                     </div>
                     <div class="input-group-btn">
                         <input id="button" type="button" value="Format" class="btn btn-primary" onclick="process()">
@@ -457,6 +457,7 @@
 
 <script type="text/javascript">
     var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        theme: 'duotone-light',
         mode: "text/html",
         lineNumbers: true, //是否显示左边换行术字
         lineWrapping: true, //是否折叠

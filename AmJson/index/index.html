@@ -66,6 +66,7 @@
     <link rel="stylesheet" href="/index/index-assets/css/mbr-additional.css">
     <link rel="stylesheet" href="/json-format/json-format-assets/css/format.css" media="none" onload="this.media='all'">
     <link rel="stylesheet" href="/index/index-assets/css/code.css" />
+
     <style>
         h1 {
             font-size: 16px;
@@ -222,7 +223,7 @@
             <div class="col-md-6">
                 <div class="editor-box2">
                     <div id="editor" style="height: auto !important;" >
-                        <textarea id="code"></textarea>
+                        <textarea id="code" ></textarea>
                         <img src="/index/index-assets/svg/file.svg"    id="json-forrmat-file" alt="" style='z-index: 9999;float: right;position: inherit;margin-top: -35px;margin-right: 25px;' width="20" height="20" title="load file">
                         <img src="/index/index-assets/svg/delete.svg" id="delete" alt="" style='z-index: 9999;float: right;position: inherit;margin-top: -65px;margin-right: 25px;' width="20" height="20" title="delete">
                     </div>
@@ -680,6 +681,7 @@
 <script src="/index/index-assets/js/color.js"></script>
 <script type="text/javascript">
     var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        theme: 'duotone-light',
         mode: "application/json", //设置json模式
         lineNumbers: true, //是否显示左边换行术字
         lineWrapping: true, //是否折叠

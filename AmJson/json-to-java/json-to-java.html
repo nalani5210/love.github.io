@@ -24,52 +24,13 @@
     <link rel="stylesheet" href="/index/index-assets/css/style.css">
     <link rel="stylesheet" href="/index/index-assets/css/theme-style.css">
     <link rel="stylesheet" href="/index/index-assets/css/mbr-additional.css">
-
+    <link rel="stylesheet" href="/index/index-assets/css/code.css" />
     <style>
         h1 {
             font-size: 16px;
             cursor:pointer;
             float: right;
             margin-top: 6px;
-        }
-
-        .input-group-btn {
-            margin-top: 16px;
-        }
-
-        #input-textarea{
-            height: 300px;
-            border-radius: 8px;
-            color: #4A4A4A;
-            border: 1px solid #979797;
-        }
-
-        .main {
-            background: #5D9CD4;
-            color: #fff;
-        }
-        .section {
-            border-radius: 8px;
-            padding: 50px;
-        }
-
-        .clearfix:after {
-            visibility: hidden;
-            display: block;
-            font-size: 0;
-            content: " ";
-            clear: both;
-            height: 0;
-        }
-
-        .src-div {
-            float: left;
-            width: 48%;
-        }
-
-        .dest-div {
-            float: right;
-            width: 48%;
         }
 
         textarea {
@@ -84,20 +45,6 @@
             width: 200px;
         }
 
-        .error-tip , .dest-div{
-            margin-top: 20px;
-        }
-
-        .result {
-            width: 100%;
-            min-height: 800px;
-        }
-
-        .right-button {
-            float: right;
-            margin: 12px 0px 1px 0px;
-        }
-
         button, .button {
             background: #fff;
             color: #5D9CD4;
@@ -106,10 +53,6 @@
             padding: 5px 20px;
             font-weight: 400;
             cursor: pointer;
-        }
-
-        .form-control {
-            min-height: 400px;
         }
 
         .cid-rdbncPfKM0 {
@@ -207,6 +150,24 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                <div id="editor" style="height: auto !important;" >
+                    <textarea id="code"></textarea>
+                    <img src="/index/index-assets/svg/file.svg"    id="json-to-java-file" title="load file" style='z-index: 9999 ;float: right;position: inherit;margin-top: -35px;margin-right: 25px;' width="20" height="20" />
+                    <img src="/index/index-assets/svg/delete.svg"  id="delete" title="delete" style='z-index: 9999;float: right;position: inherit;margin-top: -65px;margin-right: 25px;' width="20" height="20" />
+                </div>
+                <div class="input-group float-left width-50">
+                </div>
+                <div class="input-group-btn">
+                    <span class="input-group-addon">Class</span>
+                    <input type="text" class="" value="example" id="className">
+                    <span class="input-group-addon fix-border">Package</span>
+                    <input type="text" value="com.jsonformatting.tool"  id="packageName">
+                    <button type="button" class="btn btn-primary" id="getJavaBean">Generate JavaBean</button>
+                    <input type="file" class="btn btn-primary" style="display: none" id="json-to-java-loadfile"/>
+                </div>
+            </div>
+
+            <!--<div class="col-md-12">
                 <div class="form-group" data-for="message">
                     <label class="form-control-label mbr-fonts-style display-7">
                         <div class="config">
@@ -224,33 +185,15 @@
                         </div>
                     </div>
                 </div>
+            </div>-->
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="jsonBeanCon"></div>
             </div>
         </div>
     </div>
 </section>
-
-<div style="display: none" id="getset-templ">
-    public void setA(T a) {
-        this.a = a;
-    }
-    public T getA() {
-        return a;
-    }
-</div>
-
-<div style="display: none" id="input-example">
-    {
-        "id": 1,
-        "username": "john_smith",
-        "email": "john@example.com",
-        "name": "John Smith",
-        "state": "active",
-        "created_at": "2012-05-23T08:00:58Z",
-        "access_level": 40,
-        "person":{"name":"test","age":1,"from":{"country":"china"}},
-        "about":["a","b"]
-    }
-</div>
 
 <section class="mbr-section content4 single-div-title" id="content4-1b">
     <div class="container">
@@ -459,16 +402,26 @@
     </div>
 </section>
 <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><span style="text-align: center;"><i></i></span></div>
+<input type="hidden" value="json" id="selectedType"/>
 
-<script defer src="/index/index-assets/js/jquery.min.js"></script>
 <script defer src="/index/index-assets/js/bootstrap.min.js"></script>
 <script defer src="/index/index-assets/js/script.js"></script>
-<script defer src="/json-to-xml/json-to-xml-assets/js/json2xml.js"></script>
+<script src="/index/index-assets/js/global.js"></script>
+<script src="/index/index-assets/js/indexCodeMirror.js"></script>
 
-
-<script defer src="/json-to-java/json-to-java-assets/js/jquery.min.js"></script>
 <script defer src="/json-to-java/json-to-java-assets/js/jsonlint.js"></script>
-<script src="/json-to-java/json-to-java-assets/js/tool.js"></script>
 <script src="/json-to-java/json-to-java-assets/js/to-bean.js"></script>
+
+<script type="text/javascript">
+    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        mode: "application/json", //设置json模式
+        lineNumbers: true, //是否显示左边换行术字
+        lineWrapping: true, //是否折叠
+        foldGutter: true,
+        theme : 'dracula',
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+        autofocus: true
+    });
+</script>
 </body>
 </html>

@@ -604,7 +604,7 @@ function gen() {
     try {
         $("#jsonBeanCon").html(""), $("#downloadJavaBean").hide();
         var e = jsonlint.parse(editor.getValue());
-        e && ($("#jsonlintResult").html("正确的JSON!"), $("#jsonlintBox").addClass("alert-success alert").removeClass(
+        e && ($("#jsonlintResult").html("Correct JSON!"), $("#jsonlintBox").addClass("alert-success alert").removeClass(
             "alert-warning alert-danger"), $("#jsonlintIcon").addClass("icon-ok-sign").removeClass(
             "icon-info-sign icon-remove-sign"));
         var t = $("#className").val(),
@@ -614,16 +614,16 @@ function gen() {
         if (i) {
             var r;
             if ("json" === o) r = getBeanFieldFromJson(i, t);
-            else if ("sql" === o) return alert("还没实现"), void 0;
+            else if ("sql" === o) return alert("Not realized yet"), void 0;
             $.each(r, function (e, t) {
                 var i = toBeanText(t, n),
                     o = "";
                 0 != e && (o = "small-text"), i = i.replace("<int>", "<Integer>").replace("<long>", "<Long>");
-                var r = '<div class="t-big-margin">\n        <h4 class="text-green">类名：' + t.name + "</h4>\n" +
-                    '<textarea class_name="' + t.name + '" row="10" class="form-control result ' + o +
+                var r = '<div class="t-big-margin">\n        <h4 class="text-green">Class：' + t.name + "</h4>\n" +
+                    '<textarea class_name="' + t.name + '" style="height: 300px" class="form-control result ' + o +
                     '" onmouseover="this.focus();this.select()">' + i + "</textarea></div>";
                 $("#jsonBeanCon").append(r)
-            }), $("#downloadJavaBean").show(), $("#jsonlintResult").html("成功生成JavaBean")
+            }), $("#downloadJavaBean").show(), $("#jsonlintResult").html("Successfully generated JavaBean")
         }
     } catch (a) {
         document.getElementById("jsonlintResult").innerHTML = a, $("#jsonlintBox").addClass("alert-danger alert").removeClass(

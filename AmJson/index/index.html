@@ -63,6 +63,7 @@
     <link rel="stylesheet" href="/index/index-assets/css/bootstrap.min.css" media="none" onload="this.media='all'">
     <link rel="stylesheet" href="/index/index-assets/css/style.css">
     <link rel="stylesheet" href="/index/index-assets/css/theme-style.css">
+    <link rel="stylesheet" href="/index/index-assets/css/mbr-additional.css">
     <link rel="stylesheet" href="/json-format/json-format-assets/css/format.css">
     <link rel="stylesheet" href="/index/index-assets/css/code.css" />
 
@@ -678,7 +679,6 @@
 <script src="/index/index-assets/js/global.js"></script>
 <script src="/index/index-assets/js/indexCodeMirror.js"></script>
 <script src="/index/index-assets/js/color.js"></script>
-<script src="/index/index-assets/js/loadCSS.js"></script>
 
 <script type="text/javascript">
     var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
@@ -690,9 +690,6 @@
         gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
         autofocus: true
     });
-</script>
-<script id="loadcss">
-    loadCSS( "/index/index-assets/css/mbr-additional.css", document.getElementById("loadcss") );
 </script>
 </body>
 

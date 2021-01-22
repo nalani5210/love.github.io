@@ -1,179 +1,169 @@
 
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0,user-scalable=yes,maximum-scale=1.0">
-    <title>在线JSON字符串转Java实体类(JavaBean、Entity)-BeJSON.com</title>
-    <meta name="keywords" content="JSON字符串转Java实体类,JSON字符串转JavaBean,json转JavaBean,json生成JavaBean文件,json生成entity">
-    <meta name="description" content="在线JSON字符串转Java实体类(JavaBean)">
-    <link rel="stylesheet" type="text/css" href="/static/bejson/css/global.min.css?20200630" />
-    <link rel="stylesheet" type="text/css" href="/static/bejson/css/indexCodeMirror.min.css" />
-    <link rel="stylesheet" type="text/css" href="/static/bejson/css/swiper.min.css" />
-    <script src="/static/ydxyt/1.js"></script>
-    <style>
-        .xf2-gg-left,.xf-gg-right{
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            height: 200px;
-            width: 120px;
-            border-radius: 5px;
-            overflow: hidden;
-            margin-top: -100px;
-            margin-left: -714px;
-            z-index: 99;
-        }
-        .xf2-gg-left .alert-dismissable,.xf-gg-right .alert-dismissable{
-            padding: 15px;
-            text-align: center;
-        }
-        .xf2-gg-left h1{
-            color: #940000;
-            margin-top: 0;
-        }
-        .xf-gg-right{
-            left: auto;
-            right: 15px;
-        }
-        .xf2-gg-left a,.xf-gg-right a{
-            display: block;
-            width: 100%;
-            height: 100%;
-            margin: 0;
-        }
-        .xf2-gg-left a img,.xf-gg-right a img{
-            width: 100%;
-        }
-        .xf2-gg-left .close,.xf-gg-right .close{
-            position: absolute;
-            top: 5px;
-            right: 7px;
-            color: #333;
-        }
-        .top1-link{
-            position: relative;
-            width: 1160px;
-            z-index: 99;
-            height: 40px;
-        }
-        .top1-link:after{
-            content: '';
-            display: block;
-            clear: both;
-            position: absolute;
-            height: 40px;
-            width: 1160px;
-            background-color: #f6f6f6;
-            border: 1px solid #eee;
-            top: 50%;
-            left: 0;
-            margin-top: -20px;}
-        .top1-link a{margin: 10px;width: auto;color: #666666;font-size: 12px;display: block;float: left;position: relative;z-index: 2}
-    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Online JSON Beautifier - JSON Formatter - BeautifyTools.com</title>
+    <meta name="description" content="Beautify ugly, minified JSON code using Online JSON Beautifier and give it proper indentation to make it more readable."/>
+    <link rel="stylesheet" type="text/css" href="http://beautifytools.com/css/bootstrap.min.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="http://beautifytools.com/css/bootstrap-theme.min.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="http://beautifytools.com/css/jquery-ui.min.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="http://beautifytools.com/css/json_beautifier.css" media="all"/></head>
+<body>
 
-</head>
-<script>
-    function dviaytkeeuzo(blockid) {
-        jiazai_dag_all(blockid);
-    }
-</script>
-<script>
+<div class="container-fluid">
 
+</div>    <div class="container-fluid">
 
-</script>
-<body class="load-indicator" data-loading="上传中，请稍候..." data-siteid="2">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="well well-sm">
+                <form class="form-inline text-left">
+                    <fieldset>
+                        <div class="form-group buttons_div">
+                            <div class="col-md-12">
+                                <ul class="nav_ul ul_buttons">
+                                    <li><a id="load_url" href="#">Load&nbsp;Url</a></li>
+                                    <li><a id="browse" href="#">Browse</a></li>
+                                    <li><a id="beautify_json" href="#">Beautify&nbsp;json</a></li>
+                                    <li><a id="minify_json" href="#">Minify&nbsp;json</a></li>
+                                    <li><a id="editor_options" data-toggle="modal" data-target="#editor_options_modal" data-backdrop="false" href="#">Editor&nbsp;Options</a></li>
+                                    <li><a id="download" href="#">Download</a></li>
+                                    <li><a id="clear" href="#">Clear</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <input style="display:none;" id="file" name="file" class="btn btn-default" type="file">
 
-<nav class="navbar navbar-inverse" role="navigation" style="border-radius: 0">
-    <div class="container clear-both">
+                    </fieldset>
+                </form>
+                <!-- Modal -->
+                <div class="modal fade" id="url_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Enter Url</h4>
+                            </div>
+                            <div class="modal-body">
+                                <input id="url" name="url" type="text" placeholder="Enter full url" class="form-control input-md">
+                            </div>
+                            <div class="modal-footer">
+                                <button data-dismiss="modal" id="load" name="load" class="btn btn-success">Load</button>
+                                <button data-dismiss="modal" id="cancel" name="cancel" class="btn btn-danger">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="msg_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Message</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p class="text-center" id="msg"></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button data-dismiss="modal" id="ok_msg" name="ok_msg" class="btn btn-success">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="editor_options_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Editor Options</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal">
+                                    <fieldset>
 
-        <div class="navbar-header float-left">
+                                        <!-- Select Basic -->
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label" for="themes">Themes</label>
+                                            <div class="col-md-10">
+                                                <select id="themes" name="themes" class="form-control">
+                                                </select>
+                                            </div>
+                                        </div>
 
-            <a class="navbar-brand" href="/">
-                <img src="/static/bejson/img/logo.png" height="30">
-            </a>
-        </div>
-    </div>
-</nav>
+                                        <!-- Select Basic -->
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label" for="font_size">Font Size</label>
+                                            <div class="col-md-10">
+                                                <select id="font_size" name="font_size" class="form-control">
+                                                    <option value="6">6px</option>
+                                                    <option value="7">7px</option>
+                                                    <option value="8">8px</option>
+                                                    <option value="9">9px</option>
+                                                    <option value="10">10px</option>
+                                                    <option value="11">11px</option>
+                                                    <option value="12">12px</option>
+                                                    <option value="13">13px</option>
+                                                    <option value="14">14px</option>
+                                                    <option value="15">15px</option>
+                                                    <option value="16">16px</option>
+                                                    <option value="17">17px</option>
+                                                    <option value="18">18px</option>
+                                                    <option value="19">19px</option>
+                                                    <option value="20">20px</option>
+                                                    <option value="21">21px</option>
+                                                    <option value="22">22px</option>
+                                                    <option value="23">23px</option>
+                                                    <option value="24">24px</option>
+                                                    <option value="25">25px</option>
+                                                    <option value="26">26px</option>
+                                                    <option value="27">27px</option>
+                                                    <option value="28">28px</option>
+                                                    <option value="29">29px</option>
+                                                    <option value="30">30px</option>
+                                                    <option value="31">31px</option>
+                                                    <option value="32">32px</option>
+                                                    <option value="33">33px</option>
+                                                    <option value="34">34px</option>
+                                                    <option value="35">35px</option>
+                                                    <option value="36">36px</option>
+                                                </select>
+                                            </div>
+                                        </div>
 
-<div class="container t-small-margin">
-
-    <h1 class="font-18 v-big-margin no-padding-v">JSON生成Java实体类</h1>
-
-    <div class="editor-box2" id="javaBeanEditor">
-
-        <div id="editor">
-            <textarea id="code"></textarea>
-            <div id="resize">
-                <i class="icon-bars"></i>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button data-dismiss="modal" id="ok" name="ok" class="btn btn-success">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 div_code1">
+                        <div class="h_text">Enter json here:<button id="max_code1" class="btn btn-toolbar btn-sm" title="maximize" style="position:absolute;right:120px;"><span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span></button><button id="sample" class="btn btn-toolbar btn-sm" title="sample data" style="position:absolute;right:85px;"><span class="glyphicon glyphicon-copy" aria-hidden="true"></span></button><button id="copy_data1" class="btn btn-toolbar btn-sm" style="position:absolute;right:50px;"><span class="glyphicon glyphicon-duplicate" aria-hidden="true"></span></button><button id="clear_code1" class="btn btn-toolbar btn-sm" title="clear" style="position:absolute;right:15px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div>
+                        <div id="code1"></div>
+                    </div>
+                    <div class="col-md-6 div_code2">
+                        <div class="h_text">Results:<button id="max_code2" class="btn btn-toolbar btn-sm" title="maximize" style="position:absolute;right:85px;"><span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span></button><button id="copy_data2" class="btn btn-toolbar btn-sm" style="position:absolute;right:50px;"><span class="glyphicon glyphicon-duplicate" aria-hidden="true"></span></button><button id="clear_code2" class="btn btn-toolbar btn-sm" title="clear" style="position:absolute;right:15px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div>
+                        <div id="code2"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="t-huge-margin clear-both">
-        <div class="input-group float-left width-50">
-            <span class="input-group-addon">Class</span>
-            <input type="text" class="form-control" value="JsonRootBean" placeholder="" id="className">
-            <span class="input-group-addon fix-border">Package</span>
-            <input type="text" class="form-control" value="com.bejson.pojo" placeholder="密码" id="packageName">
-        </div>
-        <div class="input-group float-left l-big-margin">
-            <select class="form-control mini-radius" id="selectedType">
-                <option value="json">json</option>
-            </select>
-        </div>
-        <div class="btn-group float-left l-big-margin">
-            <button type="button" class="btn btn-primary" id="getJavaBean">生成JavaBean</button>
-            <button type="button" class="btn btn-success display-none" id="downloadJavaBean">下载代码</button>
-            <a class="btn" href="/json2javapojo/">旧版本</a>
-        </div>
     </div>
 
-    <div class="with-icon display-none" id="jsonlintBox">
-        <i class="icon-info-sign" id="jsonlintIcon"></i>
-        <pre class="content" id="jsonlintResult">请贴入要格式化的JSON代码</pre>
-    </div>
-    <div class="t-big-margin"><script>jiazai_dag_all('INDEX_PC_HENGFU')</script></div>
-    <div id="jsonBeanCon"></div>
-
-
-    <div class="clear-both">
-        <div class="float-left" style="width: 950px">
-        </div>
-    </div>
-
-</div>
-<script src="/static/bejson/js/global.min.js?v=20200630" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-
-    //添加qq列表
-    createQQlist('/static/bejson/img/qq/');
-    //菜单active
-    $('.grade-li.grade-li-active').parents('li.dropdown').addClass('active');
-
-    //初始化最近使用功能
-    recordRecentUse('JSON生成Java实体类', '/json2javapojo/new/');
-    recentUseList();
-
-</script>
-
-
-<script src="/static/bejson/js/indexCodeMirror.min.js" type="text/javascript" charset="utf-8"></script>
-
-<script src="/static/bejson/js/jsonlint.js" type="text/javascript" charset="utf-8"></script>
-<script src="/static/bejson/js/component/json2javapojo/java2pojotools2_no_encode.js" type="text/javascript" charset="utf-8"></script>
-<script src="/static/bejson/js/jszip.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/static/bejson/js/FileSaver.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-    //根据DOM元素的id构造出一个编辑器================================================================================================================================================================================================
-    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-        mode: "application/json", //设置json模式
-        lineNumbers: true, //是否显示左边换行术字
-        lineWrapping: true, //是否折叠
-        foldGutter: true,
-        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
-    });
-</script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://beautifytools.com/js/jquery-ui.min.js"></script>
+<script src="http://beautifytools.com/js/bootstrap.min.js"></script>
+<script src="http://beautifytools.com/js/zclip/jquery.zclip.min.js"></script>
+<script src="http://beautifytools.com/js/ace/src-min-noconflict/ace.js"></script>
+<script src="http://beautifytools.com/js/vkbeautify.min.js"></script>
+<script src="http://beautifytools.com/js/json_beautifier.js"></script>
 </body>
 </html>

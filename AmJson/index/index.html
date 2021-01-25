@@ -46,13 +46,20 @@
         }]
     </script>
 
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script async="async" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"> </script>
+
     <script>
-        window.googletag = window.googletag || {cmd: []};
         googletag.cmd.push(function() {
-            googletag.defineSlot('/22259777655/parent-adsence', [728 , 100], 'div-gpt-ad-1611561764590-0').addService(googletag.pubads());
+            googletag.pubads().addEventListener('slotRenderEnded',
+                function(event) {
+                    waldoPassbackCheck(event);
+                    waldoAddCloseBtn(event);
+                });
             googletag.pubads().enableSingleRequest();
             googletag.enableServices();
+            googletag.defineSlot('/22259777655/parent-adsence', [[728, 90], [320, 50]], 'div-gpt-ad-1611561764590-0')
+                .defineSizeMapping(googletag.sizeMapping().addSize([1024, 0], [[728, 90]]).addSize([768, 0], [[320, 50]]).addSize([0, 0], [[320, 50]]).build()).addService(googletag.pubads());
+            googletag.display('div-gpt-ad-1611561764590-0');
         });
     </script>
 
@@ -214,20 +221,39 @@
     </div>
 </section>
 
-<section style="height: 180px !important; background: white">
+<!--<section style="height: 180px !important; background: white">
     <div class="ads-div">
         <div id="ads">
             <div class="HeadersRow">
-                <!-- /22259777655/parent-adsence/parent-adsence-01 -->
-                <div id='div-gpt-ad-1611560596785-0'>
+                <div id="div-gpt-ad-1611560596785-0" style="width: 728px; height: 90px">
                     <script>
-                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1611560596785-0'); });
+                        googletag.cmd.push(function() {
+                            googletag.display("div-gpt-ad-1611560596785-0");
+                        });
                     </script>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</section>-->
+
+<div id="div-gpt-ad-1611560596785-0" style="width: 728px; height: 90px">
+    <script>
+        googletag.cmd.push(function() {
+            googletag.display("div-gpt-ad-1611560596785-0");
+        });
+    </script>
+</div>
+
+<!--<div class="HeadersRow">
+    <div id="div-gpt-ad-1611560596785-1" style="width: 728px; height: 90px">
+        <script>
+            googletag.cmd.push(function() {
+                googletag.display("div-gpt-ad-1611560596785-1");
+            });
+        </script>
+    </div>
+</div>-->
 
 <section class="features1 cid-rcYe6fBSWK" id="features1-u">
     <div class="container">

@@ -135,9 +135,7 @@
 <section style="height: 180px !important; background: white">
     <div class="ads-div">
         <div id="ads">
-            <div class="HeadersRow">
-
-            </div>
+            <div class="HeadersRow"></div>
         </div>
     </div>
 </section>
@@ -355,9 +353,7 @@
 <section class="cid-rcYe6fBSWK">
     <div class="ads-div-two">
         <div id="ads-two">
-            <div class="HeadersRow">
-
-            </div>
+<!--            <div class="HeadersRow"></div>-->
         </div>
     </div>
 </section>
@@ -467,7 +463,6 @@
         bodyGoogleAgs.async = true;
         bodyGoogleAgs.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
         document.getElementsByClassName("HeadersRow")[0].appendChild(bodyGoogleAgs);
-        document.getElementsByClassName("HeadersRow")[1].appendChild(bodyGoogleAgs);
 
         var ins= document.createElement ("ins");
         ins.className = "adsbygoogle";
@@ -477,12 +472,10 @@
         ins.setAttribute("data-ad-format","auto");
         ins.setAttribute("data-full-width-responsive","true");
         document.getElementsByClassName("HeadersRow")[0].appendChild(ins);
-        document.getElementsByClassName("HeadersRow")[1].appendChild(ins);
 
         var adsbygoogle= document.createElement ("script");
         adsbygoogle.append("(adsbygoogle = window.adsbygoogle || []).push({});");
         document.getElementsByClassName("HeadersRow")[0].appendChild(adsbygoogle);
-        document.getElementsByClassName("HeadersRow")[1].appendChild(adsbygoogle);
     });
 </script>
 </body>

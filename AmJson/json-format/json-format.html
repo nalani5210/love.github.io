@@ -145,14 +145,7 @@
 <section style="height: 180px !important; background: white">
     <div class="ads-div">
         <div id="ads">
-            <div class="HeadersRow">
-                <!-- /22259777655/parent-adsence/parent-adsence-01 -->
-                <div id='div-gpt-ad-1611559755602-0'>
-                    <script>
-                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1611559755602-1'); });
-                    </script>
-                </div>
-            </div>
+            <div class="HeadersRow"></div>
         </div>
     </div>
 </section>
@@ -370,14 +363,7 @@
 <section class="cid-rcYe6fBSWK">
     <div class="ads-div-two">
         <div id="ads-two">
-            <div class="HeadersRow">
-                <!-- /22259777655/parent-adsence/parent-adsence-01 -->
-                <div id='div-gpt-ad-1611559755602-1'>
-                    <script>
-                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1611559755602-2'); });
-                    </script>
-                </div>
-            </div>
+            <div class="HeadersRow"></div>
         </div>
     </div>
 </section>
@@ -476,7 +462,7 @@
         document.getElementsByTagName("head")[0].appendChild(color);
 
         /* head  ads*/
-        /*var headGoogleAgs = document.createElement ("script");
+        var headGoogleAgs = document.createElement ("script");
         headGoogleAgs.async = true;
         headGoogleAgs.setAttribute("data-ad-client","ca-pub-3292250109309115");
         headGoogleAgs.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
@@ -498,8 +484,9 @@
         document.getElementsByClassName("HeadersRow")[0].appendChild(ins);
 
         var adsbygoogle= document.createElement ("script");
+        adsbygoogle.async = true;
         adsbygoogle.append("(adsbygoogle = window.adsbygoogle || []).push({});");
-        document.getElementsByClassName("HeadersRow")[0].appendChild(adsbygoogle);*/
+        document.getElementsByClassName("HeadersRow")[0].appendChild(adsbygoogle);
     });
 </script>
 </body>

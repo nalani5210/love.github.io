@@ -46,25 +46,6 @@
         }]
     </script>
 
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-    <script>
-        window.googletag = window.googletag || {cmd: []};
-        googletag.cmd.push(function() {
-            googletag.defineSlot('/22259777655/parent-adsence/p-a-01', ['fluid'], 'div-gpt-ad-1611570383296-0').addService(googletag.pubads());
-            googletag.pubads().enableSingleRequest();
-            googletag.pubads().collapseEmptyDivs();
-            googletag.enableServices();
-        });
-    </script>
-
-
-   <!-- <script async="async" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-    <script>
-        window.googletag = window.googletag || {cmd: []};
-    </script>-->
-
-
-
     <link href="/assets/icon/json.png" rel="icon">
     <link rel="preconnect" href="https://www.jsonformatting.com/" crossorigin>
 
@@ -219,14 +200,7 @@
 <section style="height: 180px !important; background: white">
     <div class="ads-div">
         <div id="ads">
-            <div class="HeadersRow">
-                <!-- /22259777655/parent-adsence -->
-                <div id='div-gpt-ad-1611570383296-0'>
-                    <script>
-                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1611570383296-0'); });
-                    </script>
-                </div>
-            </div>
+            <div class="HeadersRow"></div>
         </div>
     </div>
 </section>
@@ -907,13 +881,13 @@
         document.getElementsByTagName("head")[0].appendChild(color);
 
         /* head  ads*/
-       /* var headGoogleAgs = document.createElement ("script");
+        var headGoogleAgs = document.createElement ("script");
         headGoogleAgs.async = true;
         headGoogleAgs.setAttribute("data-ad-client","ca-pub-3292250109309115");
         headGoogleAgs.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
         document.getElementsByTagName("head")[0].appendChild(headGoogleAgs);
 
-        /!* body  ads*!/
+        /* body  ads*/
         var bodyGoogleAgs= document.createElement ("script");
         bodyGoogleAgs.async = true;
         bodyGoogleAgs.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
@@ -929,8 +903,9 @@
         document.getElementsByClassName("HeadersRow")[0].appendChild(ins);
 
         var adsbygoogle= document.createElement ("script");
+        adsbygoogle.async = true;
         adsbygoogle.append("(adsbygoogle = window.adsbygoogle || []).push({});");
-        document.getElementsByClassName("HeadersRow")[0].appendChild(adsbygoogle);*/
+        document.getElementsByClassName("HeadersRow")[0].appendChild(adsbygoogle);
 
     });
 </script>

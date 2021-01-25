@@ -50,11 +50,10 @@
     <script>
         window.googletag = window.googletag || {cmd: []};
         googletag.cmd.push(function() {
-            googletag.defineSlot('/22259777655/parent-adsence', [600 , 100], 'div-gpt-ad-1611567824306-0').addService(googletag.pubads());
             googletag.pubads().enableSingleRequest();
-            googletag.pubads().collapseEmptyDivs();
             googletag.enableServices();
-            googletag.disable("div-gpt-ad-1611567824306-0");
+            googletag.defineSlot('/22259777655/parent-adsence', [[728, 90], [320, 50]], 'div-gpt-ad-1611567824306-0').defineSizeMapping(googletag.sizeMapping().addSize([1024, 0], [[728, 90]]).addSize([768, 0], [[320, 50]]).addSize([0, 0], [[320, 50]]).build()).addService(googletag.pubads());
+            googletag.display('div-gpt-ad-1611567824306-0');
         });
     </script>
 

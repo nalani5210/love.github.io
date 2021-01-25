@@ -16,11 +16,11 @@
     <meta property="og:image" content="https://www.jsonformatting.com/assets/icon/json.png">
     <meta property="og:description" content="JSON Formatter,JSON Validator provides online formatting and verification of JSON. It can better help you use JSON and make the format of JSON clearer.">
     <link rel="canonical" href="https://www.jsonformatting.com/json-format/" />
-    <script data-ad-client="ca-pub-3292250109309115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <link href="/assets/icon/json.png" rel="icon">
 
+    <link href="/assets/icon/json.png" rel="icon">
+    <link rel="preconnect" href="https://www.jsonformatting.com/" crossorigin>
     <link rel="stylesheet" href="/index/index-assets/css/mobirise-icons.css" rel="preload" as="style">
-    <link rel="stylesheet" href="/index/index-assets/css/bootstrap.min.css" media="none" onload="this.media='all'">
+    <link rel="stylesheet" href="/index/index-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/index/index-assets/css/style.css" media="none" onload="this.media='all'">
     <link rel="stylesheet" href="/index/index-assets/css/theme-style.css">
     <link rel="stylesheet" href="/index/index-assets/css/mbr-additional.css">
@@ -37,8 +37,6 @@
         h2 {
             text-align: center;
         }
-
-
     </style>
 </head>
 <body>
@@ -138,16 +136,7 @@
     <div class="ads-div">
         <div id="ads">
             <div class="HeadersRow">
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-3292250109309115"
-                     data-ad-slot="2574845222"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+
             </div>
         </div>
     </div>
@@ -367,16 +356,7 @@
     <div class="ads-div-two">
         <div id="ads-two">
             <div class="HeadersRow">
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-3292250109309115"
-                     data-ad-slot="2574845222"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+
             </div>
         </div>
     </div>
@@ -430,11 +410,7 @@
 </section>
 <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><span style="text-align: center;"><i></i></span></div>
 
-<script defer src="/index/index-assets/js/bootstrap.min.js"></script>
-<script defer src="/index/index-assets/js/script.js"></script>
-<script src="/index/index-assets/js/global.js"></script>
 <script src="/index/index-assets/js/indexCodeMirror.js"></script>
-<script src="/index/index-assets/js/color.js"></script>
 
 <script type="text/javascript">
     var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
@@ -445,6 +421,68 @@
         foldGutter: true,
         gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
         autofocus: true
+    });
+</script>
+
+<script>
+    window.addEventListener('load', function() {
+
+        var global = document.createElement ("script");
+        global.type = "text/javascript";
+        global.src = "/index/index-assets/js/global.js";
+        global.defer = true;
+        global.async = false;
+        document.getElementsByTagName("head")[0].appendChild(global);
+
+        var bootstrap = document.createElement ("script");
+        bootstrap.type = "text/javascript";
+        bootstrap.src = "/index/index-assets/js/bootstrap.min.js";
+        bootstrap.defer = true;
+        bootstrap.async = false;
+        document.getElementsByTagName("head")[0].appendChild(bootstrap);
+
+        var script = document.createElement ("script");
+        script.type = "text/javascript";
+        script.src = "/index/index-assets/js/script.js";
+        script.defer = true;
+        script.async = false;
+        document.getElementsByTagName("head")[0].appendChild(script);
+
+        var color = document.createElement ("script");
+        color.type = "text/javascript";
+        color.src = "/index/index-assets/js/color.js";
+        color.defer = true;
+        color.async = false;
+        document.getElementsByTagName("head")[0].appendChild(color);
+
+        /* head  ads*/
+        var headGoogleAgs = document.createElement ("script");
+        headGoogleAgs.async = true;
+        headGoogleAgs.setAttribute("data-ad-client","ca-pub-3292250109309115");
+        headGoogleAgs.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+        document.getElementsByTagName("head")[0].appendChild(headGoogleAgs);
+
+        /* body  ads*/
+        var bodyGoogleAgs= document.createElement ("script");
+        bodyGoogleAgs.async = true;
+        bodyGoogleAgs.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+        document.getElementsByClassName("HeadersRow")[0].appendChild(bodyGoogleAgs);
+        document.getElementsByClassName("HeadersRow")[1].appendChild(bodyGoogleAgs);
+
+        var ins= document.createElement ("ins");
+        ins.className = "adsbygoogle";
+        ins.style.display = "block";
+        ins.setAttribute("data-ad-client","ca-pub-3292250109309115");
+        ins.setAttribute("data-ad-slot","2574845222");
+        ins.setAttribute("data-ad-format","auto");
+        ins.setAttribute("data-full-width-responsive","true");
+        document.getElementsByClassName("HeadersRow")[0].appendChild(ins);
+        document.getElementsByClassName("HeadersRow")[1].appendChild(ins);
+
+        var adsbygoogle= document.createElement ("script");
+        adsbygoogle.append("(adsbygoogle = window.adsbygoogle || []).push({});");
+        document.getElementsByClassName("HeadersRow")[0].appendChild(adsbygoogle);
+        document.getElementsByClassName("HeadersRow")[1].appendChild(adsbygoogle);
     });
 </script>
 </body>

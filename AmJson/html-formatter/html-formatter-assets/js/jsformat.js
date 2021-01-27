@@ -437,6 +437,19 @@ $(document).on('click', '#copy', function() {
     document.body.removeChild(input);
 });
 
+$(document).on('click', '#copy_css', function() {
+    const input = document.createElement('textarea');
+    document.body.appendChild(input);
+    input.value = viewer.getValue();
+    input.select();
+    if (document.execCommand('copy')) {
+        document.execCommand('copy');
+        $(".show").remove();
+        $(".editor-css").append("<div class=\"alert alert-success alert-dismissible fade show\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>Copied to Clipboard.</div>");
+    }
+    document.body.removeChild(input);
+});
+
 $('#delete').click(function() {
     editor.setValue("");
 });

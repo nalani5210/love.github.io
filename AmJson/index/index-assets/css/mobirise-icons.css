@@ -17,25 +17,28 @@
     line-height:1;
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale
-} 
+}
 .mbri-arrow-down:before {
     content:"\e908"
-} 
+}
 .mbri-arrow-up:before {
     content:"\e90b"
-} 
+}
 .mbri-calendar:before {
     content:"\e912"
-} 
+}
 .mbri-lock:before {
     content:"\e947"
-} 
+}
 .mbri-pages:before {
     content:"\e956"
-} 
+}
 .mbri-share:before {
     content:"\e96f"
-} 
+}
 .mbri-website-theme:before {
     content:"\e990"
-} 
+}
+.mbri-drag-n-drop2:before {
+    content:"\e928";
+}
